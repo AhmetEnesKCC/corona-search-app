@@ -1,0 +1,219 @@
+::selection {
+  background-color: #f0932b;
+  color: white;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+.top {
+  width: 100%;
+  height: 20vw;
+}
+
+.imageContainer {
+  width: calc(6% + 15vw);
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.imageContainer .image {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  margin-top: 2.5vw;
+  margin-left: calc(100% - 15vw);
+  animation-name: slideFromLeft;
+  animation-duration: 3s;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  width: calc(94% - 15vw);
+  float: left;
+  height: 20vw;
+  position: relative;
+}
+
+.textContainer .text {
+  width: 80%;
+  margin: 0px auto;
+  height: 10vw;
+  margin-top: 5vw;
+  position: relative;
+  animation-name: slideFromRight;
+  animation-duration: 1.5s;
+}
+
+.textContainer .text h1 {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  font-size: 8vw;
+  margin-top: 1vw;
+  color: white;
+}
+
+.top::after {
+  clear: both;
+  content: "  ";
+  display: none;
+}
+
+.searchBar {
+  width: 100%;
+  height: 14vw;
+  margin-top: 6vw;
+  position: relative;
+}
+
+.searchBar .search {
+  position: absolute;
+  margin-top: 4vw;
+  height: 6vw;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.searchBar .search input {
+  height: 6vw;
+  font-size: 4vw;
+  width: 100%;
+  margin: 0px 0;
+  border-radius: 10vw;
+  padding: 1vw;
+  border: none;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0.2vw 0 0.2vw grey;
+  box-shadow: 0 0.2vw 0 0.2vw grey;
+  text-align: center;
+  color: #f0932b !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  outline: none;
+}
+
+@keyframes slideFromLeft {
+  from {
+    margin-left: -15vw;
+  }
+  to {
+    margin-left: calc(100% - 15vw);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 0px;
+  margin-right: 0.5vw;
+  width: 8vw;
+  height: 5vw;
+  margin-top: 0.3vw;
+  border-radius: 10vw;
+  background-color: #f0932b;
+  border: none;
+  color: #fff;
+  font-size: 1.5vw;
+  box-shadow: 0 0.2vw 0 0.2vw #f3b876;
+  outline: none;
+}
+.btn:active {
+  box-shadow: none;
+  margin-top: 0.5vw;
+}
+
+.btn p {
+  margin: 0px;
+}
+
+.cover {
+  max-width: 100%;
+}
+
+::placeholder {
+  color: #f0932b;
+  opacity: 0.5;
+}
+
+#topbtn {
+  visibility: hidden;
+  position: fixed;
+  right: 6vw;
+  bottom: 6vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 100%;
+  background-image: url(Images/goTop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+}
+
+#topbtn:hover {
+  cursor: pointer;
+  filter: grayscale(0.2);
+}
+
+#topbtn:active {
+  filter: grayscale(0.6);
+}
+
+
+
+#topbtn.show {
+  visibility: visible;
+}
+
+.result {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  margin-top: 10vw;
+}
+
+.result p {
+  display: block;
+  background-color: grey;
+  border-radius: 10vw;
+  line-height: 10vw;
+  width: 60%;
+  margin: 0px auto;
+  margin-bottom: 5vw;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+
+}
+
+.yellow {
+  color: yellow;
+  font-weight: bold;
+
+}
+
+
