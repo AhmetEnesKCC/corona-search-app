@@ -158,7 +158,7 @@ body {
   right: 3vw;
   bottom: 3vw;
   width: 5vw;
-  height: 5givw;
+  height: 5vw;
   border-radius: 100%;
   background-image: url(Images/goTop.png);
   background-size: cover;
@@ -242,6 +242,8 @@ body {
     float: none;
     position: relative;
     left: 0px;
+    width: 50%;
+    height: 30vw;
 
   }
 
@@ -250,20 +252,22 @@ body {
     margin: 0px auto;
     width: 100%;
     right: 0px;
+    margin-top: 10vw;
 
   }
 
   .result p {
-    width: 60%;
+    width: 50%;
     margin: 0px auto;
     float: none;
-    margin-top: 5vw;
+    margin-top: 7vw;
+    font-size: 4vw;
   }
 
   .searchBar .search {
-    width: 70%;
-    height: 10vw;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 75%;
+    height: 12vw;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
   }
 }
