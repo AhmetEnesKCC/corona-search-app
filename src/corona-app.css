@@ -238,12 +238,15 @@ body {
 }
 
 @media (max-width: 576px) {
+  .top {
+    margin-top: 10vw;
+  }
   .flags {
     float: none;
     position: relative;
     left: 0px;
-    width: 50%;
-    height: 30vw;
+    width: 70%;
+    height: 45vw;
 
   }
 
@@ -257,17 +260,23 @@ body {
   }
 
   .result p {
-    width: 50%;
+    width: 70%;
     margin: 0px auto;
     float: none;
     margin-top: 7vw;
-    font-size: 4vw;
+    font-size: 7vw;
+    line-height: 9vw;
   }
 
   .searchBar .search {
-    width: 76%;
-    height: 12vw;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-top: 10vw;
+    width: 80%;
+    height: 30vw;
+    margin-left: 10%;
+    margin-right: 10%;
   }
+}
+
+.hide {
+  display: none;
 }

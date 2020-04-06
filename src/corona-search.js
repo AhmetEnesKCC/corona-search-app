@@ -15,6 +15,7 @@ class Search extends React.Component {
       Deaths: undefined,
       Error: undefined,
       Flags: undefined,
+
     };
 
   
@@ -33,7 +34,13 @@ class Search extends React.Component {
       this.setState({
         Flags: flagData[0].flag,
       })
-      }
+    }
+
+      
+      
+      
+      
+      
       
       
       
