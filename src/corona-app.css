@@ -155,10 +155,10 @@ body {
 #topbtn {
   visibility: hidden;
   position: fixed;
-  right: 6vw;
-  bottom: 6vw;
-  width: 7vw;
-  height: 7vw;
+  right: 3vw;
+  bottom: 3vw;
+  width: 5vw;
+  height: 5givw;
   border-radius: 100%;
   background-image: url(Images/goTop.png);
   background-size: cover;
@@ -185,18 +185,23 @@ body {
 .result {
   color: white;
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
+  margin: 0px auto;
   margin-top: 10vw;
+  width: fit-content;
+  position: relative;
+
 }
 
 .result p {
   display: block;
   background-color: grey;
   border-radius: 10vw;
-  line-height: 10vw;
-  width: 60%;
+  line-height: 5vw;
+  width: 100%;
   margin: 0px auto;
   margin-bottom: 5vw;
+  float: left;
 }
 
 .green {
@@ -216,4 +221,49 @@ body {
 
 }
 
+.flags {
+  width: 30%;
+  height: 25vw;
+  margin: 0px auto;
+  float: left;
+  position: relative;
+  left: 10vw;
+}
 
+.left {
+  float: right;
+  width: 36%;
+  position: relative;
+  right: 10vw;
+}
+
+@media (max-width: 576px) {
+  .flags {
+    float: none;
+    position: relative;
+    left: 0px;
+
+  }
+
+  .left {
+    float: none;
+    margin: 0px auto;
+    width: 100%;
+    right: 0px;
+
+  }
+
+  .result p {
+    width: 60%;
+    margin: 0px auto;
+    float: none;
+    margin-top: 5vw;
+  }
+
+  .searchBar .search {
+    width: 70%;
+    height: 10vw;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}

@@ -14,15 +14,30 @@ class Search extends React.Component {
       Recovered: undefined,
       Deaths: undefined,
       Error: undefined,
+      Flags: undefined,
     };
+
+  
 
     get = async (e) => {
       e.preventDefault();
       const country = e.target.elements.country.value;
+      const flag_call = await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
       const api_call = await fetch(`https://api.collectapi.com/corona/countriesData?country=${country}`,{method:'POST',headers: {
         "content-type": "application/json",
         "authorization": "apikey 29lHC5ootLf5GzS3pSCfAX:5OrAtMfecMxflAjdItazUG"
       }});
+      const flagData = await flag_call.json(); 
+      if ( flagData.length === 1 ) {
+        console.log(flagData);
+      this.setState({
+        Flags: flagData[0].flag,
+      })
+      }
+      
+      
+      
+
       const data = await api_call.json();
           if ( data.result.length === 1) {
             console.log(data);
@@ -78,6 +93,7 @@ class Search extends React.Component {
                Recovered={this.state.Recovered}
                Deaths={this.state.Deaths}
                Error={this.state.Errors}
+               Flags={this.state.Flags}
                />
         
           </div>

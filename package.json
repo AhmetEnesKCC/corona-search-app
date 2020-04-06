@@ -2,6 +2,7 @@
   "name": "corona-info-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AhmetEnesKCC.github.io/corona-search-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -17,6 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
