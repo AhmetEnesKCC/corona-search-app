@@ -1,3 +1,28 @@
+
+CORONA-SEARCH-APP 
+
+○ Shows Cases,Deaths,Recovereds number for your typed country 
+○ Shows Flags for each country
+
+◘ I used collectapi.com for corona api. THANK YOU
+
+◘ Used RestAPI for Country Flags.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
