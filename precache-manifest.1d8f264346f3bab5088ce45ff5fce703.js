@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ccbc99ff317daeb1d676ef58ea343ca5",
+    "revision": "1a0cd1f324abdba4699d0da3bd388681",
     "url": "/corona-search-app/index.html"
   },
   {
-    "revision": "643964f47ec50618126d",
-    "url": "/corona-search-app/static/css/main.6288335f.chunk.css"
+    "revision": "525db97fce4d7daea49e",
+    "url": "/corona-search-app/static/css/main.33f9c2e9.chunk.css"
   },
   {
     "revision": "488c1cad4f1a2039910d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/corona-search-app/static/js/2.d64a4c5c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "643964f47ec50618126d",
+    "revision": "525db97fce4d7daea49e",
     "url": "/corona-search-app/static/js/main.16ead7ce.chunk.js"
   },
   {
