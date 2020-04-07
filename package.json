@@ -2,7 +2,7 @@
   "name": "corona-info-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AhmetEnesKCC.github.io/corona-app/",
+  "homepage": "https://ahmeteneskcc.github.io/corona-search-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
