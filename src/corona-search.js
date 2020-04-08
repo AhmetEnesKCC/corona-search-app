@@ -9,7 +9,6 @@ import UK from "./Images/UK.jpg"
 import Iran from "./Images/Iran.png"
 
 
-alert("○ Type the first letter Uppercase\n○ Expect!!! USA and UK\n○ Like Italy\n○ TYPE 'World' FOR GLOBAL RESULT\n Added DARK MODE")
 class Search extends React.Component {
 
     state = {
@@ -28,7 +27,8 @@ class Search extends React.Component {
 
     get = async (e) => {
       e.preventDefault();
-      const country = e.target.elements.country.value;
+      var country = e.target.elements.country.value;
+      country = country.charAt(0).toUpperCase() + country.slice(1);
       const flag_call = await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
       const api_call = await fetch(`https://api.collectapi.com/corona/countriesData?country=${country}`,{method:'POST',headers: {
         "content-type": "application/json",
@@ -42,7 +42,8 @@ class Search extends React.Component {
         this.setState({
           Flags: flagData[0].flag,
         })
-      } else if ( country === "World"){
+      } 
+      else if ( country === "World"){
         this.setState({
           Flags: World 
         }) 
@@ -54,11 +55,11 @@ class Search extends React.Component {
         this.setState({
           Flags: Iran,
         })
-      }
-      }
+      } 
+      } 
       
-      
-      
+
+
       const data = await api_call.json();
           if ( data.result.length === 1) {
             console.log(data);
@@ -79,15 +80,12 @@ class Search extends React.Component {
             NewDeaths: "-"
           })
         }
-          } else if ( data.result.length === 0 ) {
-            const a = "First Letter must be Uppercase"
-            alert(a)
-          }  
+          } 
           
         
       
 
-    }
+        }
     
 
     
@@ -101,6 +99,13 @@ class Search extends React.Component {
     document.body.scrollDown = 0;
     document.documentElement.scrollDown = 0;
     }
+    
+
+    
+    
+       
+    
+    
     darkMode() {
       var x = document.getElementById("switch");
       if ( x.checked === true ) {

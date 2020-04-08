@@ -9,14 +9,17 @@ class Forms extends React.Component {
     document.body.scrollUp = 0;
     document.documentElement.scrollUp = 0;
   }
+  
+  
+  
     
     render() {
         return(
             <div>
                 <div className="searchBar">
           <div className="search">
-            <form onSubmit={this.props.get}>
-              <input autoComplete="off" spellCheck="false" className="searchInput" type="search" name="country" placeholder="enter the country name"/>
+            <form  onSubmit={this.props.get}>
+              <input   autoComplete="off" spellCheck="false" className="searchInput" type="search" name="country" placeholder="enter the country name"/>
             <button  className="btn">
               
               <p>SEARCH</p>
