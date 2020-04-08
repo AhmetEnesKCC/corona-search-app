@@ -9,7 +9,7 @@ import UK from "./Images/UK.jpg"
 import Iran from "./Images/Iran.png"
 
 
-alert("○ Type the first letter Uppercase\n○ Expect!!! USA and UK\n○ Like Italy\n○ TYPE 'World' FOR GLOBAL RESULT")
+alert("○ Type the first letter Uppercase\n○ Expect!!! USA and UK\n○ Like Italy\n○ TYPE 'World' FOR GLOBAL RESULT\n Added DARK MODE")
 class Search extends React.Component {
 
     state = {
@@ -103,7 +103,7 @@ class Search extends React.Component {
         document.body.style.backgroundColor = "white";
         document.getElementsByClassName("switcher")[0].style.color = "black";
         document.getElementsByClassName("info")[0].style.color = "#707070"
-        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(230, 230, 230)"
+        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)"
 
 
 
