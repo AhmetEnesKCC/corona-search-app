@@ -99,7 +99,7 @@ body {
   border-radius: 10vw;
   padding: 1vw;
   border: none;
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(233, 230, 230);
   text-decoration: none;
   -webkit-box-shadow: 0 0.2vw 0 0.2vw grey;
   box-shadow: 0 0.2vw 0 0.2vw grey;
@@ -255,12 +255,15 @@ body {
   float: right;
   width: 10vw;
   height: 3vw;
+  margin-top: 5vw;
 }
 .switcher {
   float: left;
   margin: 0px;
   color: black;
   font-size: 2vw;
+  margin-top: 5vw;
+  font-weight: bolder;
 }
 .switch {
   opacity: 0;
