@@ -28,7 +28,15 @@ class Search extends React.Component {
     get = async (e) => {
       e.preventDefault();
       var country = e.target.elements.country.value;
+      if ( country === "usa") {
+        country = country.toUpperCase();
+      } if (country === "uk") {
+        country = country.toUpperCase();
+      }
+       
       country = country.charAt(0).toUpperCase() + country.slice(1);
+      
+      
       const flag_call = await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
       const api_call = await fetch(`https://api.collectapi.com/corona/countriesData?country=${country}`,{method:'POST',headers: {
         "content-type": "application/json",
@@ -57,7 +65,6 @@ class Search extends React.Component {
         })
       } 
       } 
-      
 
 
       const data = await api_call.json();
@@ -71,15 +78,13 @@ class Search extends React.Component {
           NewDeaths: data.result[0].newDeaths,
           error: "",
         });
-        if (data.result[0].newCases === "") {
+        if ( data.result[0].newCases === "" || data.result[0].newDeaths === "") {
           this.setState({
-            NewCases: "-"
-          })
-        }  if ( data.result[0].newDeaths === "") {
-          this.setState({
+            NewCases: "-",
             NewDeaths: "-"
           })
-        }
+        }  
+        
           } 
           
         
@@ -91,14 +96,10 @@ class Search extends React.Component {
     
 
    
-    goTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-    goDown() {
-    document.body.scrollDown = 0;
-    document.documentElement.scrollDown = 0;
-    }
+        goTop() {
+          window.scrollTo({top : 0,behavior: "smooth"})
+
+        }
     
 
     
@@ -163,7 +164,7 @@ class Search extends React.Component {
           </div>
           <div className="textContainer">
             <div className="text">
-              <h1 className="info">CORONAVIRUS</h1>
+              <h1 className="info">CORONA TRACK</h1>
             </div>
           </div>
         </div>

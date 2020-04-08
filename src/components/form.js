@@ -5,12 +5,14 @@ import React from 'react'
 
 class Forms extends React.Component {
 
-  goDown() {
-    document.body.scrollUp = 0;
-    document.documentElement.scrollUp = 0;
-  }
-  
-  
+  goDownNTS() {
+    window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})
+
+    }
+    goDown() {
+      window.setTimeout(() => this.goDownNTS(), 3000)
+    }
+    
   
     
     render() {
@@ -20,7 +22,7 @@ class Forms extends React.Component {
           <div className="search">
             <form  onSubmit={this.props.get}>
               <input   autoComplete="off" spellCheck="false" className="searchInput" type="search" name="country" placeholder="enter the country name"/>
-            <button  className="btn">
+            <button  className="btn" onClick={() => this.goDown()}>
               
               <p>SEARCH</p>
               </button> 
