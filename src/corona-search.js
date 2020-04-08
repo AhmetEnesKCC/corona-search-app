@@ -22,6 +22,7 @@ class Search extends React.Component {
       LIGHTMODE: "Light Mode",
 
     };
+  
 
   
 
@@ -34,7 +35,7 @@ class Search extends React.Component {
         country = country.toUpperCase();
       } if ( country === "Usa") {
         country = country.toUpperCase();
-      }
+      } 
        
       country = country.charAt(0).toUpperCase() + country.slice(1);
       
@@ -79,15 +80,15 @@ class Search extends React.Component {
           NewCases: data.result[0].newCases,
           NewDeaths: data.result[0].newDeaths,
           error: "",
+          
         });
+        
         if ( data.result[0].newCases === "" || data.result[0].newDeaths === "") {
           this.setState({
             NewCases: "-",
             NewDeaths: "-"
           })
-        }  
-        
-          } 
+        }  }
           
         
       

@@ -10,7 +10,7 @@ class Forms extends React.Component {
 
     }
     goDown() {
-      window.setTimeout(() => this.goDownNTS(), 3000)
+      window.setTimeout(() => this.goDownNTS(), 4000)
     }
     
   
