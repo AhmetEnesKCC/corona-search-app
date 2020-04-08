@@ -20,6 +20,7 @@ class Search extends React.Component {
       Flags: undefined,
       NewCases: undefined,
       NewDeaths: undefined,
+      LIGHTMODE: "Light Mode",
 
     };
 
@@ -55,9 +56,8 @@ class Search extends React.Component {
         })
       }
       }
-
-
-    
+      
+      
       
       const data = await api_call.json();
           if ( data.result.length === 1) {
@@ -70,14 +70,25 @@ class Search extends React.Component {
           NewDeaths: data.result[0].newDeaths,
           error: "",
         });
+        if (data.result[0].newCases === "") {
+          this.setState({
+            NewCases: "-"
+          })
+        }  if ( data.result[0].newDeaths === "") {
+          this.setState({
+            NewDeaths: "-"
+          })
+        }
           } else if ( data.result.length === 0 ) {
             const a = "First Letter must be Uppercase"
             alert(a)
-          }
+          }  
+          
         
       
 
     }
+    
 
     
 
@@ -96,7 +107,13 @@ class Search extends React.Component {
         document.body.style.backgroundColor = "black";
         document.getElementsByClassName("switcher")[0].style.color = "white";
         document.getElementsByClassName("info")[0].style.color = "white"
-        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white"
+        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("result")[0].style.color = "black";
+        document.getElementsByClassName("switcher")[0].style.content = "DARK MODE";
+        this.setState({
+          LIGHTMODE: "Dark Mode",
+        })
+        
 
 
       } else if ( x.checked === false ) {
@@ -104,6 +121,13 @@ class Search extends React.Component {
         document.getElementsByClassName("switcher")[0].style.color = "#707070";
         document.getElementsByClassName("info")[0].style.color = "#707070"
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)"
+        document.getElementsByClassName("result")[0].style.color = "white";
+        this.setState({
+          LIGHTMODE: "Light Mode"
+        })
+
+
+
 
 
 
@@ -118,10 +142,10 @@ class Search extends React.Component {
             <div className="cover">
               <div className="darkMode">
                 <div className="makeMiddle">
-                  <p className="switcher">DARK MODE</p>
+                  <p className="switcher">{this.state.LIGHTMODE}</p>
                   <label className="globalSwitch">
                   <input onClick={() => this.darkMode()} className="switch" type="checkbox" id="switch"/>
-                  <span class="slider"></span>
+                  <span className="slider"></span>
                   </label>
                   
                 </div>
