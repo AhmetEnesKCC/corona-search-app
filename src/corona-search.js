@@ -6,6 +6,7 @@ import Forms from "./components/form";
 import Result from "./components/result"
 import World from "./Images/world-1303628_1920.png"
 import UK from "./Images/UK.jpg"
+import Iran from "./Images/Iran.png"
 
 
 alert("○ Type the first letter Uppercase\n○ Expect!!! USA and UK\n○ Like Italy\n○ TYPE 'World' FOR GLOBAL RESULT")
@@ -47,6 +48,10 @@ class Search extends React.Component {
       } else if ( country === "UK" ){
         this.setState({
           Flags: UK
+        })
+      } else if ( country === "Iran") {
+        this.setState({
+          Flags: Iran,
         })
       }
       }
