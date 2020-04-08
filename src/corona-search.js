@@ -226,6 +226,7 @@ class Search extends React.Component {
               <p className="navbarDATA">Total Recoveries: {this.state.TotalRecoveries}</p>
               <hr className="rule"></hr>
               <h2 className="sidebarContent">USA DATAS</h2>
+              <hr className="rule"></hr>
               <p className="navbarDATA">Total Case: {this.state.USAcases}</p>
               <p className="navbarDATA">Total Deaths: {this.state.USAdeaths}</p>
               <p className="navbarDATA">Total Recovered: {this.state.USArecovered}</p>
