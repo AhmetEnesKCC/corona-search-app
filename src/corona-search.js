@@ -32,6 +32,8 @@ class Search extends React.Component {
         country = country.toUpperCase();
       } if (country === "uk") {
         country = country.toUpperCase();
+      } if ( country === "Usa") {
+        country = country.toUpperCase();
       }
        
       country = country.charAt(0).toUpperCase() + country.slice(1);
@@ -100,6 +102,8 @@ class Search extends React.Component {
           window.scrollTo({top : 0,behavior: "smooth"})
 
         }
+        
+        
     
 
     

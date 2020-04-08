@@ -203,11 +203,13 @@ body {
 
 .result p {
   display: block;
+  text-align: left;
   background-color: grey;
   border-radius: 10vw;
   line-height: 3vw;
   width: 100%;
   margin: 0px auto;
+  padding-left: 1vw;
   margin-bottom: 3vw;
   float: left;
 }
@@ -292,6 +294,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 20vw;
+  border: 1px white solid;
 }
 .slider::before {
   position: absolute;
