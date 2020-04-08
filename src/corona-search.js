@@ -8,9 +8,14 @@ import World from "./Images/world-1303628_1920.png"
 import UK from "./Images/UK.jpg"
 import Iran from "./Images/Iran.png"
 import China from "./Images/china.png"
+import Sidebar from "react-sidebar"
+import Hamburger from "./Images/hamburger.png"
 
 
 class Search extends React.Component {
+  
+
+  
 
     state = {
       Case: undefined,
@@ -21,9 +26,43 @@ class Search extends React.Component {
       NewCases: undefined,
       NewDeaths: undefined,
       LIGHTMODE: "Light Mode",
+      sideBarOpen: true,
+      TotalCases: undefined,
+      TotalDeaths: undefined,
+      TotalRecoveries: undefined,
+      USAcases: undefined,
+      USAdeaths: undefined,
+      USArecovered: undefined,
 
     };
-   
+
+    USA = async (e) => {
+      const api_callUSA = await fetch(`https://api.collectapi.com/corona/countriesData?country=USA`,{method:'POST',headers: {
+        "content-type": "application/json",
+        "authorization": "apikey 29lHC5ootLf5GzS3pSCfAX:5OrAtMfecMxflAjdItazUG"
+      }});
+      const USAdatas = await api_callUSA.json();
+      console.log(USAdatas);
+      this.setState({
+        USAcases: USAdatas.result[0].totalCases,
+        USAdeaths: USAdatas.result[0].totalDeaths,
+        USArecovered: USAdatas.result[0].totalRecovered,
+      })
+    }
+    
+    World = async (e) => {
+      const api_callforNav = await fetch(`https://api.collectapi.com/corona/totalData`,{method:'POST',headers: {
+        "content-type": "application/json",
+        "authorization": "apikey 29lHC5ootLf5GzS3pSCfAX:5OrAtMfecMxflAjdItazUG"
+      }});
+      const DATAS = await api_callforNav.json();
+      console.log(DATAS);
+      this.setState({
+        TotalCases: DATAS.result.totalCases,
+        TotalDeaths: DATAS.result.totalDeaths,
+        TotalRecoveries: DATAS.result.totalRecovered,
+      })
+    }
   
 
   
@@ -47,6 +86,8 @@ class Search extends React.Component {
         "content-type": "application/json",
         "authorization": "apikey 29lHC5ootLf5GzS3pSCfAX:5OrAtMfecMxflAjdItazUG"
       }});
+      
+      
       if ( country !== "" ) {
         const flagData = await flag_call.json();
       if ( flagData.length === 1 ) {
@@ -74,7 +115,6 @@ class Search extends React.Component {
         })
       }
       } 
-
 
       const data = await api_call.json();
           if ( data.result.length === 1) {
@@ -128,8 +168,10 @@ class Search extends React.Component {
         document.getElementsByClassName("switcher")[0].style.color = "white";
         document.getElementsByClassName("info")[0].style.color = "white"
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white";
-        document.getElementsByClassName("result")[0].style.color = "black";
-        document.getElementsByClassName("switcher")[0].style.content = "DARK MODE";
+        document.getElementsByClassName("result")[0].style.color = "white";
+        document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)"
+
+        //document.getElementsByClassName("darker")[0].style.color = "#707070";
         this.setState({
           LIGHTMODE: "Dark Mode",
         })
@@ -139,9 +181,14 @@ class Search extends React.Component {
       } else if ( x.checked === false ) {
         document.body.style.backgroundColor = "white";
         document.getElementsByClassName("switcher")[0].style.color = "#707070";
-        document.getElementsByClassName("info")[0].style.color = "#707070"
-        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)"
+        document.getElementsByClassName("info")[0].style.color = "#707070";
+        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)";
         document.getElementsByClassName("result")[0].style.color = "white";
+        document.getElementsByClassName("hamburger")[0].style.filter = "invert(0%)"
+
+
+        //document.getElementsByClassName("darker")[0].style.color = "white"
+
         this.setState({
           LIGHTMODE: "Light Mode"
         })
@@ -154,13 +201,45 @@ class Search extends React.Component {
 
       }
     } 
+   
+
+    onSetSidebarOpen(open) {
+      this.setState({ sidebarOpen: open})
+      this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    }
+    
     
     
     
     render() {
+      
         return (
-            <div className="cover">
-              <div className="darkMode">
+          
+            <div onLoad={() => this.World()} className="cover">
+              <Sidebar 
+          sidebar={
+            <div>
+              <h2 className="sidebarContent">TOTAL DATAS</h2>
+              <hr className="rule"></hr>
+              <p className="navbarDATA">Total Case: {this.state.TotalCases}</p>
+              <p className="navbarDATA">Total Deaths: {this.state.TotalDeaths}</p>
+              <p className="navbarDATA">Total Recoveries: {this.state.TotalRecoveries}</p>
+              <hr className="rule"></hr>
+              <h2 className="sidebarContent">USA DATAS</h2>
+              <p className="navbarDATA">Total Case: {this.state.USAcases}</p>
+              <p className="navbarDATA">Total Deaths: {this.state.USAdeaths}</p>
+              <p className="navbarDATA">Total Recovered: {this.state.USArecovered}</p>
+            </div>
+
+        }
+          open={this.state.sidebarOpen}
+          onSetOpen={this.onSetSidebarOpen}
+          styles={{sidebar: {background: "black",width: "30vh",position: "fixed",backgroundColor: "#707070"}}}>
+            <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
+              <img className="hamburger" src={Hamburger} alt="hamburger"/>
+            </button>
+          </Sidebar>
+                <div className="darkMode">
                 <div className="makeMiddle">
                   <p className="switcher">{this.state.LIGHTMODE}</p>
                   <label className="globalSwitch">
@@ -170,7 +249,7 @@ class Search extends React.Component {
                   
                 </div>
               </div>
-            <div className="top">
+            <div onLoad={() => this.USA()} className="top">
           <div className="imageContainer">
             <div className="image">
               <img src={Logo} alt="corona"/>

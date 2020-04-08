@@ -20,7 +20,25 @@ body {
   width: 100%;
   height: 20vw;
 }
-
+.sidebarContent {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+}
+.sidebarBTN {
+  width: 3vw;
+  height: 3vw;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 2vw;
+  top: 2vw;
+}
+.sidebarBTN img {
+  width: 3vw;
+  height: 3vw;
+}
 .imageContainer {
   width: calc(6% + 15vw);
   height: 100%;
@@ -204,7 +222,7 @@ body {
 .result p {
   display: block;
   text-align: left;
-  background-color: grey;
+  background-color:  #f0932b;
   border-radius: 10vw;
   line-height: 3vw;
   width: 100%;
@@ -238,7 +256,9 @@ body {
   float: left;
   position: relative;
   left: 10vw;
+
 }
+
 
 .left {
   float: right;
@@ -273,10 +293,10 @@ body {
   height: 0;
 }
 .switch:checked + .slider {
-  background-color: #050944;
+  background-color: #f0932b;
 }
 .switch:focus + .slider {
-  box-shadow: 0 0 0.25vw #050944;
+  box-shadow: 0 0 0.25vw #f0932b;
 }
 .switch:checked +.slider::before {
   -webkit-transform: translateX(7vw);
@@ -290,7 +310,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f0932b;
+  background-color: #050944;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 20vw;
@@ -312,10 +332,20 @@ body {
   margin: 0px auto;
   width: 25%;
 }
+.navbarDATA {
+  color: white;
+  text-align: left;
+  margin-left: 10%;
+} 
+
 
 @media (max-width: 576px) {
  
- 
+  .sidebarContent {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+  }
   
   .top {
     margin-top: 10vw;
@@ -326,7 +356,6 @@ body {
     left: 0px;
     width: 70%;
     height: 45vw;
-    border: 2vw white solid;
 
   }
 
@@ -339,6 +368,11 @@ body {
 
   }
 
+  .navbarDATA {
+    color: white;
+    font-size: 3vw;
+  }
+
   .result p {
     width: 70%;
     margin: 0px auto;
@@ -346,6 +380,7 @@ body {
     margin-top: 7vw;
     font-size: 7vw;
     line-height: 9vw;
+    font-family: 'Arimo', sans-serif;
   }
 
   .searchBar .search {
@@ -355,8 +390,22 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
+  .topBtn {
+    right: 5vw;
+    bottom: 5vw;
+    width: 6vw;
+    height: 6vw;
+  }
+  .sidebar {
+  }
 }
 
 .hide {
   display: none;
+}
+
+.rule {
+  width: 80%;
+  height: 0.4vw;
+  background-color: white;
 }
