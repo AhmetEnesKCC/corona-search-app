@@ -1,27 +1,28 @@
 {
   "files": {
     "main.css": "/corona-search-app/static/css/main.59fec54e.chunk.css",
-    "main.js": "/corona-search-app/static/js/main.df08e5c4.chunk.js",
-    "main.js.map": "/corona-search-app/static/js/main.df08e5c4.chunk.js.map",
+    "main.js": "/corona-search-app/static/js/main.111ac4bb.chunk.js",
+    "main.js.map": "/corona-search-app/static/js/main.111ac4bb.chunk.js.map",
     "runtime-main.js": "/corona-search-app/static/js/runtime-main.a76c3c34.js",
     "runtime-main.js.map": "/corona-search-app/static/js/runtime-main.a76c3c34.js.map",
-    "static/js/2.e50584bb.chunk.js": "/corona-search-app/static/js/2.e50584bb.chunk.js",
-    "static/js/2.e50584bb.chunk.js.map": "/corona-search-app/static/js/2.e50584bb.chunk.js.map",
+    "static/js/2.edad773f.chunk.js": "/corona-search-app/static/js/2.edad773f.chunk.js",
+    "static/js/2.edad773f.chunk.js.map": "/corona-search-app/static/js/2.edad773f.chunk.js.map",
     "index.html": "/corona-search-app/index.html",
-    "precache-manifest.80c31ccf5c23202bd747150be453d3c4.js": "/corona-search-app/precache-manifest.80c31ccf5c23202bd747150be453d3c4.js",
+    "precache-manifest.a33b5eb60b6432d9441e1b9975ee022f.js": "/corona-search-app/precache-manifest.a33b5eb60b6432d9441e1b9975ee022f.js",
     "service-worker.js": "/corona-search-app/service-worker.js",
     "static/css/main.59fec54e.chunk.css.map": "/corona-search-app/static/css/main.59fec54e.chunk.css.map",
-    "static/js/2.e50584bb.chunk.js.LICENSE.txt": "/corona-search-app/static/js/2.e50584bb.chunk.js.LICENSE.txt",
+    "static/js/2.edad773f.chunk.js.LICENSE.txt": "/corona-search-app/static/js/2.edad773f.chunk.js.LICENSE.txt",
     "static/media/Iran.png": "/corona-search-app/static/media/Iran.40a16200.png",
     "static/media/UK.jpg": "/corona-search-app/static/media/UK.441c24e4.jpg",
+    "static/media/china.png": "/corona-search-app/static/media/china.06055976.png",
     "static/media/coronaImage.png": "/corona-search-app/static/media/coronaImage.323906f7.png",
     "static/media/corona-app.css": "/corona-search-app/static/media/goTop.01089832.png",
     "static/media/world-1303628_1920.png": "/corona-search-app/static/media/world-1303628_1920.a9018b41.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a76c3c34.js",
-    "static/js/2.e50584bb.chunk.js",
+    "static/js/2.edad773f.chunk.js",
     "static/css/main.59fec54e.chunk.css",
-    "static/js/main.df08e5c4.chunk.js"
+    "static/js/main.111ac4bb.chunk.js"
   ]
 }
