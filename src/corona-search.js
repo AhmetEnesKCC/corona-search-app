@@ -33,8 +33,25 @@ class Search extends React.Component {
       USAcases: undefined,
       USAdeaths: undefined,
       USArecovered: undefined,
+      TurkeyCases: undefined,
+      TurkeyDeaths: undefined,
+      TurkeyRecovered: undefined,
 
     };
+
+    Turkey = async (e) => {
+      const api_callTurkey = await fetch(`https://api.collectapi.com/corona/countriesData?country=Turkey`,{method:'POST',headers: {
+        "content-type": "application/json",
+        "authorization": "apikey 29lHC5ootLf5GzS3pSCfAX:5OrAtMfecMxflAjdItazUG"
+      }});
+      const TURKEYdatas = await api_callTurkey.json();
+      console.log(TURKEYdatas);
+      this.setState({
+        TurkeyCases: TURKEYdatas.result[0].totalCases,
+        TurkeyDeaths: TURKEYdatas.result[0].totalDeaths,
+        TurkeyRecovered: TURKEYdatas.result[0].totalRecovered,
+      })
+    }
 
     USA = async (e) => {
       const api_callUSA = await fetch(`https://api.collectapi.com/corona/countriesData?country=USA`,{method:'POST',headers: {
@@ -224,12 +241,18 @@ class Search extends React.Component {
               <p className="navbarDATA">Total Case: {this.state.TotalCases}</p>
               <p className="navbarDATA">Total Deaths: {this.state.TotalDeaths}</p>
               <p className="navbarDATA">Total Recoveries: {this.state.TotalRecoveries}</p>
+              <h2 className="sidebarContent">Turkey Datas</h2>
+              <hr className="rule"></hr>
+              <p className="navbarDATA">Total Case: {this.state.TurkeyCases}</p>
+              <p className="navbarDATA">Total Deaths: {this.state.TurkeyDeaths}</p>
+              <p className="navbarDATA">Total Recovered: {this.state.TurkeyRecovered}</p>
               <hr className="rule"></hr>
               <h2 className="sidebarContent">USA DATAS</h2>
               <hr className="rule"></hr>
               <p className="navbarDATA">Total Case: {this.state.USAcases}</p>
               <p className="navbarDATA">Total Deaths: {this.state.USAdeaths}</p>
               <p className="navbarDATA">Total Recovered: {this.state.USArecovered}</p>
+              <hr className="rule"></hr>
             </div>
 
         }
@@ -251,7 +274,7 @@ class Search extends React.Component {
                 </div>
               </div>
             <div onLoad={() => this.USA()} className="top">
-          <div className="imageContainer">
+          <div onLoad={() => this.Turkey()} className="imageContainer">
             <div className="image">
               <img src={Logo} alt="corona"/>
             </div>
