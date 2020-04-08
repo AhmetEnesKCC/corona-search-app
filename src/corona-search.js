@@ -7,6 +7,7 @@ import Result from "./components/result"
 import World from "./Images/world-1303628_1920.png"
 import UK from "./Images/UK.jpg"
 import Iran from "./Images/Iran.png"
+import China from "./Images/china.png"
 
 
 class Search extends React.Component {
@@ -22,6 +23,7 @@ class Search extends React.Component {
       LIGHTMODE: "Light Mode",
 
     };
+   
   
 
   
@@ -66,7 +68,11 @@ class Search extends React.Component {
         this.setState({
           Flags: Iran,
         })
-      } 
+      } else if ( country === "China") {
+        this.setState({
+          Flags: China
+        })
+      }
       } 
 
 
@@ -88,7 +94,9 @@ class Search extends React.Component {
             NewCases: "-",
             NewDeaths: "-"
           })
-        }  }
+        }
+          
+      }
           
         
       
@@ -103,6 +111,7 @@ class Search extends React.Component {
           window.scrollTo({top : 0,behavior: "smooth"})
 
         }
+        
         
         
     
