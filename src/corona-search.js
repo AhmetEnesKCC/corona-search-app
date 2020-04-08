@@ -101,7 +101,7 @@ class Search extends React.Component {
 
       } else if ( x.checked === false ) {
         document.body.style.backgroundColor = "white";
-        document.getElementsByClassName("switcher")[0].style.color = "black";
+        document.getElementsByClassName("switcher")[0].style.color = "#707070";
         document.getElementsByClassName("info")[0].style.color = "#707070"
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)"
 

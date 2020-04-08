@@ -260,7 +260,7 @@ body {
 .switcher {
   float: left;
   margin: 0px;
-  color: black;
+  color: #707070;
   font-size: 2vw;
   margin-top: 5vw;
   font-weight: bolder;
@@ -307,7 +307,7 @@ body {
 }
 .makeMiddle {
   margin: 0px auto;
-  width: 30%;
+  width: 25%;
 }
 
 @media (max-width: 576px) {
