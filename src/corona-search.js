@@ -90,13 +90,42 @@ class Search extends React.Component {
     document.body.scrollDown = 0;
     document.documentElement.scrollDown = 0;
     }
+    darkMode() {
+      var x = document.getElementById("switch");
+      if ( x.checked === true ) {
+        document.body.style.backgroundColor = "black";
+        document.getElementsByClassName("switcher")[0].style.color = "white";
+        document.getElementsByClassName("info")[0].style.color = "white"
+        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white"
 
+
+      } else if ( x.checked === false ) {
+        document.body.style.backgroundColor = "white";
+        document.getElementsByClassName("switcher")[0].style.color = "black";
+        document.getElementsByClassName("info")[0].style.color = "#707070"
+        document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(230, 230, 230)"
+
+
+
+
+      }
+    } 
     
     
     
     render() {
         return (
             <div className="cover">
+              <div className="darkMode">
+                <div className="makeMiddle">
+                  <p className="switcher">DARK MODE</p>
+                  <label className="globalSwitch">
+                  <input onClick={() => this.darkMode()} className="switch" type="checkbox" id="switch"/>
+                  <span class="slider"></span>
+                  </label>
+                  
+                </div>
+              </div>
             <div className="top">
           <div className="imageContainer">
             <div className="image">
@@ -105,7 +134,7 @@ class Search extends React.Component {
           </div>
           <div className="textContainer">
             <div className="text">
-              <h1>CORONAVIRUS</h1>
+              <h1 className="info">CORONAVIRUS</h1>
             </div>
           </div>
         </div>
