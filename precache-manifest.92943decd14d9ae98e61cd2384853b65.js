@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a55f07ba02450a49363f591ce448370",
+    "revision": "a7f1fe708a02414f2999fbe342094515",
     "url": "/corona-search-app/index.html"
   },
   {
-    "revision": "f18049acebc1feb6a569",
+    "revision": "93a637d14273ca81ebb7",
     "url": "/corona-search-app/static/css/main.da2ad5a6.chunk.css"
   },
   {
-    "revision": "7e2fbd72b1588019687d",
-    "url": "/corona-search-app/static/js/2.dd23ad4c.chunk.js"
+    "revision": "aab086c82cdada09a143",
+    "url": "/corona-search-app/static/js/2.e50584bb.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/corona-search-app/static/js/2.dd23ad4c.chunk.js.LICENSE.txt"
+    "url": "/corona-search-app/static/js/2.e50584bb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f18049acebc1feb6a569",
-    "url": "/corona-search-app/static/js/main.77e69a5a.chunk.js"
+    "revision": "93a637d14273ca81ebb7",
+    "url": "/corona-search-app/static/js/main.38f74600.chunk.js"
   },
   {
     "revision": "5519a827a1be5bb25ce1",
     "url": "/corona-search-app/static/js/runtime-main.a76c3c34.js"
+  },
+  {
+    "revision": "40a16200e408300b8bb5d72ae5385658",
+    "url": "/corona-search-app/static/media/Iran.40a16200.png"
   },
   {
     "revision": "441c24e4a33977915803c5c4d2d3986a",
