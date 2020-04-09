@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da0da750846a77f588139e36e509b512",
+    "revision": "f2c5e8efc2ccae5b28d32f74942ab848",
     "url": "/corona-search-app/index.html"
   },
   {
-    "revision": "c093fb35aaae41d2501b",
-    "url": "/corona-search-app/static/css/main.2980d028.chunk.css"
+    "revision": "004db68c3189f921e2d9",
+    "url": "/corona-search-app/static/css/main.322f5095.chunk.css"
   },
   {
-    "revision": "bf20e04ee7fb0a4745ee",
-    "url": "/corona-search-app/static/js/2.7325c19e.chunk.js"
+    "revision": "a392656372e0ad46cdb3",
+    "url": "/corona-search-app/static/js/2.09f53c82.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/corona-search-app/static/js/2.7325c19e.chunk.js.LICENSE.txt"
+    "url": "/corona-search-app/static/js/2.09f53c82.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c093fb35aaae41d2501b",
-    "url": "/corona-search-app/static/js/main.f4f7f355.chunk.js"
+    "revision": "004db68c3189f921e2d9",
+    "url": "/corona-search-app/static/js/main.ea794946.chunk.js"
   },
   {
     "revision": "5519a827a1be5bb25ce1",
