@@ -289,7 +289,7 @@ body {
   text-align: center;
   font-size: 3vw;
   margin: 0px auto;
-  margin-top: 10vw;
+  margin-top: 15vw;
   width: fit-content;
   position: relative;
 
@@ -334,7 +334,7 @@ body {
   float: left;
   position: relative;
   left: 10vw;
-  top: 3vw;
+  top: 0vw;
 
 }
 
@@ -344,6 +344,7 @@ body {
   width: 36%;
   position: relative;
   right: 10vw;
+  top: -4vw;
 }
 .darkMode {
   width: 100%;
