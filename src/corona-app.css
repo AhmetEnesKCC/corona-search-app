@@ -312,18 +312,18 @@ body {
 }
 
 .green {
-  color: #99f19e;
+  color: #3b8686;
   font-weight: bold;
 }
 
 .red {
-  color: #490a3d;
+  color: #a6172d;
   font-weight: bold;
 
 }
 
 .yellow {
-  color: yellow;
+  color: #0080ff;
   font-weight: bold;
 
 }
@@ -498,8 +498,23 @@ body {
     width: 6vw;
     height: 6vw;
   }
-  .sidebar {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: transparent;
+    padding: 1vw;
+    color: white;
   }
+  .grid-item:nth-child(-n+4) {
+    color: #f0932b;
+    font-size: 2.1vw;
+  }
+  .grid-item {
+    border-bottom: .2vw white solid;
+    padding: .2vw;
+    font-size: 2vw;
+  }
+  
 }
 
 .hide {

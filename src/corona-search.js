@@ -398,7 +398,7 @@ class Search extends React.Component {
         }
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{sidebar: {background: "black",position: "fixed",width: "30vw",backgroundColor: "#707070",minWidth: "40vw"}}}>
+          styles={{sidebar: {background: "black",position: "fixed",width: "30vh",backgroundColor: "#707070",}}}>
             <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
             </button>
