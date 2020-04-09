@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/corona-search-app/static/css/main.35083500.chunk.css",
-    "main.js": "/corona-search-app/static/js/main.69dee02d.chunk.js",
-    "main.js.map": "/corona-search-app/static/js/main.69dee02d.chunk.js.map",
+    "main.js": "/corona-search-app/static/js/main.e32c5ce7.chunk.js",
+    "main.js.map": "/corona-search-app/static/js/main.e32c5ce7.chunk.js.map",
     "runtime-main.js": "/corona-search-app/static/js/runtime-main.a76c3c34.js",
     "runtime-main.js.map": "/corona-search-app/static/js/runtime-main.a76c3c34.js.map",
     "static/js/2.dfcdec4d.chunk.js": "/corona-search-app/static/js/2.dfcdec4d.chunk.js",
     "static/js/2.dfcdec4d.chunk.js.map": "/corona-search-app/static/js/2.dfcdec4d.chunk.js.map",
     "index.html": "/corona-search-app/index.html",
-    "precache-manifest.e9204f416ed9efa3f668f35740fa98a3.js": "/corona-search-app/precache-manifest.e9204f416ed9efa3f668f35740fa98a3.js",
+    "precache-manifest.8f3621d0f1bc259580b5d22b2c7fdd62.js": "/corona-search-app/precache-manifest.8f3621d0f1bc259580b5d22b2c7fdd62.js",
     "service-worker.js": "/corona-search-app/service-worker.js",
     "static/css/main.35083500.chunk.css.map": "/corona-search-app/static/css/main.35083500.chunk.css.map",
     "static/js/2.dfcdec4d.chunk.js.LICENSE.txt": "/corona-search-app/static/js/2.dfcdec4d.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.a76c3c34.js",
     "static/js/2.dfcdec4d.chunk.js",
     "static/css/main.35083500.chunk.css",
-    "static/js/main.69dee02d.chunk.js"
+    "static/js/main.e32c5ce7.chunk.js"
   ]
 }
