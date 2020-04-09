@@ -433,6 +433,12 @@ body {
   color: #f0932b;
   font-size: 1.8vw;
 }
+.grid-item:nth-child(4n) {
+  text-align: right;
+}
+.grid-item:nth-child(4n-1) {
+  text-align: center;
+}
 .grid-item {
   border-bottom: .2vw white solid;
   padding: .2vw;
@@ -527,3 +533,4 @@ body {
   background-color: white;
   margin: 0px;
 }
+
