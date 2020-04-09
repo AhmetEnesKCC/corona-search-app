@@ -155,8 +155,8 @@ class Search extends React.Component {
         
         if ( data.result[0].newCases === "" || data.result[0].newDeaths === "") {
           this.setState({
-            NewCases: "not certain",
-            NewDeaths: "not certain"
+            NewCases: "Not certain",
+            NewDeaths: "Not certain"
           })
         }
           

@@ -297,7 +297,7 @@ body {
 .result p {
   display: block;
   text-align: left;
-  background-color:  #f349eb;
+  background-color:  rgba(240,147,43,0.5);
   border-radius: 10vw;
   line-height: 3vw;
   width: 100%;
@@ -306,6 +306,7 @@ body {
   margin-bottom: 3vw;
   float: left;
   font-weight: bolder;
+  color: white;
 }
 
 .green {
@@ -454,7 +455,7 @@ body {
     margin: 0px auto;
     float: none;
     margin-top: 7vw;
-    font-size: 7vw;
+    font-size: 5.5vw;
     line-height: 9vw;
     font-family: 'Arimo', sans-serif;
   }
