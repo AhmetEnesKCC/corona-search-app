@@ -14,7 +14,7 @@
   width: 5vw;
   height: 5vw;
   animation: Start infinite 10s ;
-  opacity: 20%;
+  opacity: 20% !important;
 }
 .animated2 {
   position: absolute;
@@ -22,7 +22,7 @@
   height: 20vw;
   z-index: 0;
   left: 40vw;
-  opacity: 20%;
+  opacity: 20% !important;
   top: 10vw;
   animation: infinite Wawe 10s alternate-reverse;
 }
@@ -127,7 +127,7 @@ body {
   margin-left: calc(100% - 15vw);
   animation-name: slideFromLeft;
   animation-duration: 3s;
-  opacity: 20%;
+  opacity: 20% !important;
 }
 
 .imageContainer img {
