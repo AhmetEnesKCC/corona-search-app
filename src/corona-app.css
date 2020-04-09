@@ -426,6 +426,9 @@ body {
     text-align: center;
     font-size: 4vw;
   }
+  .result {
+    margin-top: 8vw;
+  }
   
   .top {
     margin-top: 10vw;
