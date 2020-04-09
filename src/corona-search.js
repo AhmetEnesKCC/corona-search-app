@@ -93,7 +93,14 @@ class Search extends React.Component {
         country = country.toUpperCase();
       } if ( country === "Usa") {
         country = country.toUpperCase();
-      } 
+      } if ( country === "Türkiye" || country === "türkiye") {
+        country = "Turkey";
+      } if ( country === "Amerika" || country === "amerika") {
+        country = "USA";
+      }  if ( country === "italya" || country === "İtalya") {
+        country = "Italy";
+      }
+       
        
       country = country.charAt(0).toUpperCase() + country.slice(1);
       
@@ -148,8 +155,8 @@ class Search extends React.Component {
         
         if ( data.result[0].newCases === "" || data.result[0].newDeaths === "") {
           this.setState({
-            NewCases: "-",
-            NewDeaths: "-"
+            NewCases: "not certain",
+            NewDeaths: "not certain"
           })
         }
           
@@ -168,7 +175,8 @@ class Search extends React.Component {
           window.scrollTo({top : 0,behavior: "smooth"})
 
         }
-        
+
+     
         
         
     
@@ -194,7 +202,7 @@ class Search extends React.Component {
         })
         
 
-
+      
       } else if ( x.checked === false ) {
         document.body.style.backgroundColor = "white";
         document.getElementsByClassName("switcher")[0].style.color = "#707070";
@@ -233,6 +241,8 @@ class Search extends React.Component {
         return (
           
             <div onLoad={() => this.World()} className="cover">
+              <img className="animated" src={Logo} alt="animated corona"/>
+              <img className="animated2" src={Logo} alt="animated corona"/>
               <Sidebar 
           sidebar={
             <div>
