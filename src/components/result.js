@@ -11,11 +11,11 @@ class Result extends React.Component {
             <div className="result">
                 {this.props.Flags && <img className="flags" src={this.props.Flags} alt="flags"/>}
                 <div className="left">
-                {this.props.Case && <p className="darker">Cases: <span className="yellow"><CountUp start={0} end={parseInt(this.props.Case.replace(/,/g, ""))} duration={4}></CountUp></span></p>}
-                {this.props.Recovered && <p className="darker">Recovered: <span className="green"><CountUp start={0} end={parseInt(this.props.Recovered.replace(/,/g, ""))} duration={4}></CountUp></span></p>}
-                {this.props.Deaths && <p className="darker">Deaths: <span className="red"><CountUp start={0} end={parseInt(this.props.Deaths.replace(/,/g, ""))} duration={4}></CountUp></span></p>}
-                {this.props.NewCases && <p className="darker">New cases: <span className="yellow">{this.props.NewCases}</span></p>}
-                {this.props.NewDeaths && <p className="darker">New deaths: <span id="newdeaths" className="red">{this.props.NewDeaths}</span></p>}
+                {this.props.Case && <p className="darker">Cases: <span className="yellow"><CountUp start={0} end={this.props.Case} duration={2}></CountUp></span></p>}
+                {this.props.Recovered && <p className="darker">Recovered: <span className="green"><CountUp start={0} end={this.props.Recovered} duration={2}></CountUp></span></p>}
+                {this.props.Deaths && <p className="darker">Deaths: <span className="red"><CountUp start={0} end={this.props.Deaths} duration={2}></CountUp></span></p>}
+                {this.props.deathPercent && <p className="darker">Death Percent: <span className="yellow">% <CountUp decimals={2} end={(this.props.deathPercent)} duration={3}></CountUp></span></p>}
+                {this.props.Critical && <p className="darker">Critical: <span id="newdeaths" className="red">{this.props.Critical}</span></p>}
                 </div>
                 
                 

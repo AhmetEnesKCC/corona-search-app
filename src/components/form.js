@@ -10,7 +10,7 @@ class Forms extends React.Component {
 
     }
     goDown() {
-      window.setTimeout(() => this.goDownNTS(), 3000)
+      window.setTimeout(() => this.goDownNTS(), 1000)
     }
     
   
@@ -20,7 +20,7 @@ class Forms extends React.Component {
             <div>
                 <div className="searchBar">
           <div className="search">
-            <form  onSubmit={this.props.get}>
+            <form  onSubmit={this.props.DATA}>
               <input   autoComplete="off" spellCheck="false" className="searchInput" type="search" name="country" placeholder="enter the country name"/>
             <button  className="btn" onClick={() => this.goDown()}>
               
