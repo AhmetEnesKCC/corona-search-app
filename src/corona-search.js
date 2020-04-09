@@ -36,7 +36,8 @@ class Search extends React.Component {
       TurkeyCases: undefined,
       TurkeyDeaths: undefined,
       TurkeyRecovered: undefined,
-
+      TurkeyNewDeaths: undefined,
+      TurkeyNewCases: undefined,
     };
 
     Turkey = async (e) => {
@@ -50,7 +51,19 @@ class Search extends React.Component {
         TurkeyCases: TURKEYdatas.result[0].totalCases,
         TurkeyDeaths: TURKEYdatas.result[0].totalDeaths,
         TurkeyRecovered: TURKEYdatas.result[0].totalRecovered,
+        TurkeyNewCases: TURKEYdatas.result[0].newCases,
+        TurkeyNewDeaths: TURKEYdatas.result[0].newCases,
       })
+      if (TURKEYdatas.result[0].newCases === "") {
+        this.setState({
+          TurkeyNewCases: "Not Certain"
+        })
+      }
+      if (TURKEYdatas.result[0].newDeaths === "") {
+        this.setState({
+          TurkeyNewDeaths: "Not Certain"
+        })
+      }
     }
 
     USA = async (e) => {
@@ -257,6 +270,8 @@ class Search extends React.Component {
               <p className="navbarDATA">Total Case: {this.state.TurkeyCases}</p>
               <p className="navbarDATA">Total Deaths: {this.state.TurkeyDeaths}</p>
               <p className="navbarDATA">Total Recovered: {this.state.TurkeyRecovered}</p>
+              <p className="navbarDATA">New Cases: {this.state.TurkeyNewCases}</p>
+              <p className="navbarDATA">New Deaths: {this.state.TurkeyNewDeaths}</p>
               <hr className="rule"></hr>
               <h2 className="sidebarContent">USA DATAS</h2>
               <hr className="rule"></hr>

@@ -96,6 +96,7 @@ body {
   color: white;
   text-align: center;
   font-size: 2vw;
+  margin: 0;
 }
 .sidebarBTN {
   width: 6vw;
@@ -328,11 +329,12 @@ body {
 
 .flags {
   width: 30%;
-  height: 25vw;
+  height: 20vw;
   margin: 0px auto;
   float: left;
   position: relative;
   left: 10vw;
+  top: 3vw;
 
 }
 
