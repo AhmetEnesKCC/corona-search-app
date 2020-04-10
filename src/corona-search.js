@@ -238,19 +238,29 @@ class Search extends React.Component {
     
 
     
-    
        
     
     
     darkMode() {
       var x = document.getElementById("switch");
+     
+      
       if ( x.checked === true ) {
+        for ( var a = 0; a < document.getElementsByClassName("grid-item").length; a++ ) {
+          document.getElementsByClassName("grid-item")[a].style.borderBottom  = "white .2vw solid"
+
+        }
+        
         document.body.style.backgroundColor = "black";
         document.getElementsByClassName("switcher")[0].style.color = "white";
         document.getElementsByClassName("info")[0].style.color = "white"
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white";
         document.getElementsByClassName("result")[0].style.color = "white";
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)"
+        document.getElementsByClassName("sidebarINFO")[0].style.backgroundColor = "#707070"
+        document.getElementsByClassName("grid-container")[0].style.color = "white"
+
+
 
         //document.getElementsByClassName("darker")[0].style.color = "#707070";
         this.setState({
@@ -260,12 +270,24 @@ class Search extends React.Component {
 
       
       } else if ( x.checked === false ) {
+        for ( var b = 0; b < document.getElementsByClassName("grid-item").length; b++ ) {
+          document.getElementsByClassName("grid-item")[b].style.borderBottom  = "#707070 .2vw solid"
+
+        }
+        
         document.body.style.backgroundColor = "white";
         document.getElementsByClassName("switcher")[0].style.color = "#707070";
         document.getElementsByClassName("info")[0].style.color = "#707070";
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)";
         document.getElementsByClassName("result")[0].style.color = "white";
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(0%)"
+        document.getElementsByClassName("sidebarINFO")[0].style.backgroundColor = "white"
+        document.getElementsByClassName("grid-container")[0].style.color = "#707070"
+
+
+
+
+
 
 
         //document.getElementsByClassName("darker")[0].style.color = "white"
@@ -398,7 +420,7 @@ class Search extends React.Component {
         }
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{sidebar: {background: "black",position: "fixed",width: "50%",backgroundColor: "#707070",}}}>
+          styles={{sidebar: {background: "black",position: "fixed",width: "50%",backgroundColor: "transparent"}}}>
             <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
             </button>
@@ -413,16 +435,7 @@ class Search extends React.Component {
                 </div>
               
             <div className="top">
-          <div className="imageContainer">
-            <div className="image">
-              <img src={Logo} alt="corona"/>
-            </div>
-          </div>
-          <div className="textContainer">
-            <div className="text">
               <h1 className="info">CORONA TRACK</h1>
-            </div>
-          </div>
         </div>
         <Forms DATA={this.DATA}/>
         <button id="topbtn" onClick={() => this.goTop()}>

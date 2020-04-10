@@ -3,9 +3,6 @@
   color: white;
 }
 
-.info {
-  color: #707070;
-}
 
 .animated {
   position: absolute;
@@ -15,13 +12,14 @@
   height: 5vw;
   animation: Start infinite 10s ;
   filter: opacity(20%);
+  z-index: 1;
 
 }
 .animated2 {
   position: absolute;
   width: 20vw;
   height: 20vw;
-  z-index: 0;
+  z-index: -1;
   left: 40vw;
   filter: opacity(20%);
   top: 10vw;
@@ -91,13 +89,13 @@ body {
 .top {
   width: 100%;
   height: 20vw;
-  margin-top: 5vw;
 }
 .sidebarContent {
   color: white;
   text-align: center;
   font-size: 2vw;
   margin: 0;
+  height: fit-content;
 }
 .sidebarBTN {
   width: 6vw;
@@ -115,53 +113,21 @@ body {
   width: 3vw;
   height: 3vw;
 }
-.imageContainer {
-  width: calc(6% + 15vw);
-  height: 100%;
-  position: relative;
-  float: left;
-}
 
-.imageContainer .image {
-  position: absolute;
-  width: 15vw;
-  height: 15vw;
-  margin-top: 2.5vw;
-  margin-left: calc(100% - 15vw);
-  animation-name: slideFromLeft;
-  animation-duration: 3s;
-  filter: opacity(20%);
-}
 
-.imageContainer img {
-  width: 100%;
-  height: 100%;
-}
 
-.textContainer {
-  width: calc(94% - 15vw);
-  float: left;
-  height: 20vw;
-  position: relative;
-}
 
-.textContainer .text {
-  width: 80%;
-  margin: 0px auto;
-  height: 10vw;
-  margin-top: 5vw;
-  position: relative;
-  animation-name: slideFromRight;
-  animation-duration: 1.5s;
-}
 
-.textContainer .text h1 {
-  position: absolute;
+
+
+ h1 {
   margin: 0px;
   padding: 0px;
   font-size: 8vw;
-  margin-top: 1vw;
+  margin-top: 14vw;
   color: #707070;
+  width: 100vw;
+  text-align: center;
 }
 
 .top::after {
@@ -173,13 +139,12 @@ body {
 .searchBar {
   width: 100%;
   height: 14vw;
-  margin-top: 6vw;
   position: relative;
 }
 
 .searchBar .search {
   position: absolute;
-  margin-top: 4vw;
+  margin-top: 2vw;
   height: 6vw;
   width: 60%;
   margin-right: 20%;
@@ -413,7 +378,7 @@ body {
   position: absolute;
   z-index: 1;
   left: 37.5%;
-  top: 5%;
+  top: 3%;
 }
 .navbarDATA {
   color: white;
@@ -421,13 +386,16 @@ body {
   margin-left: 10%;
 } 
 
-
+.sidebarINFO {
+  background-color:white;
+  height: fit-content;
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: transparent;
   padding: .5vw;
-  color: white;
+  color: #707070;
 }
 .grid-item:nth-child(-n+4) {
   color: #f0932b;
@@ -440,14 +408,15 @@ body {
   text-align: center;
 }
 .grid-item {
-  border-bottom: .2vw white solid;
   padding: .2vw;
   font-size: 1.5vw;
+  border-bottom: #707070 .2vw solid;
 }
 @media (max-width: 576px) {
- 
+   .sidebarINFO {
+     height: 100vh;
+   }
   .sidebarContent {
-    color: white;
     text-align: center;
     font-size: 4vw;
   }
@@ -509,14 +478,14 @@ body {
     grid-template-columns: auto auto auto auto;
     background-color: transparent;
     padding: 1vw;
-    color: white;
+    color: #707070;
   }
   .grid-item:nth-child(-n+4) {
     color: #f0932b;
     font-size: 2.1vw;
   }
   .grid-item {
-    border-bottom: .2vw white solid;
+    border-bottom: .2vw#707070 solid;
     padding: .2vw;
     font-size: 2vw;
   }
