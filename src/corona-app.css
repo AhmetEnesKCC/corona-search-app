@@ -321,8 +321,8 @@ body {
   position: relative;
   display: inline-block;
   float: right;
-  width: 10vw;
-  height: 3vw;
+  width: 15vw;
+  height: 4vw;
 }
 .switcher {
   float: left;
@@ -330,6 +330,7 @@ body {
   color: #707070;
   font-size: 2vw;
   font-weight: bolder;
+  margin-top: 1vw;
 }
 .switch {
   opacity: 0;
@@ -363,21 +364,21 @@ body {
 .slider::before {
   position: absolute;
   content: "";
-  height: 2vw;
-  width: 2vw;
-  left: 0.5vw;
+  height: 3vw;
+  width: 6vw;
+  left: 1vw;
   bottom: 0.5vw;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 100%;
+  border-radius: 10vw;
 }
 .makeMiddle {
   margin: 0px auto;
-  width: 25%;
+  width: 30%;
   position: absolute;
   z-index: 1;
-  left: 37.5%;
+  left: 35%;
   top: 3%;
 }
 .navbarDATA {
@@ -400,6 +401,10 @@ body {
 .grid-item:nth-child(-n+4) {
   color: #f0932b;
   font-size: 1.8vw;
+  text-transform: uppercase;
+}
+.grid-item:nth-child(n) {
+  text-transform: uppercase;
 }
 .grid-item:nth-child(4n) {
   text-align: right;

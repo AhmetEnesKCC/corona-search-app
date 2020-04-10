@@ -166,6 +166,9 @@ class Search extends React.Component {
           document.getElementsByClassName("grid-item")[a].style.borderBottom  = "white .2vw solid"
 
         }
+        for ( var d = 0; d < document.getElementsByClassName("firstFOR").length;d++) {
+          document.getElementsByClassName("firstFOR")[d].style.color = "white"
+        }
         
         document.body.style.backgroundColor = "black";
         document.getElementsByClassName("switcher")[0].style.color = "white";
@@ -188,7 +191,11 @@ class Search extends React.Component {
       } else if ( x.checked === false ) {
         for ( var b = 0; b < document.getElementsByClassName("grid-item").length; b++ ) {
           document.getElementsByClassName("grid-item")[b].style.borderBottom  = "#707070 .2vw solid"
+        
 
+        }
+        for ( var c = 0; c< document.getElementsByClassName("firstFOR").length;c++) {
+          document.getElementsByClassName("firstFOR")[c].style.color = "#f0932b"
         }
         
         document.body.style.backgroundColor = "white";
@@ -199,6 +206,7 @@ class Search extends React.Component {
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(0%)"
         document.getElementsByClassName("sidebarINFO")[0].style.backgroundColor = "white"
         document.getElementsByClassName("grid-container")[0].style.color = "#707070"
+
 
 
 
@@ -243,10 +251,10 @@ class Search extends React.Component {
             <div>
               <div className="sidebarINFO">
                 <div className="grid-container">
-                  <div className="grid-item">LOCATION</div>
-                  <div className="grid-item">CASES</div>
-                  <div className="grid-item">RECOVERED</div>
-                  <div className="grid-item">DEATHS</div>
+                  <div className="grid-item firstFOR">LOCATION</div>
+                  <div className="grid-item firstFOR">CASES</div>
+                  <div className="grid-item firstFOR">RECOVERED</div>
+                  <div className="grid-item firstFOR">DEATHS</div>
                   <div className="grid-item">{this.state.countries_stat.map(item => (
                     <p key={item.country}>{item.country_name}</p>
                   ))}</div>
