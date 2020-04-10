@@ -412,7 +412,7 @@ body {
   width: 30vw;
   grid-template-columns: auto;
   position: absolute;
-  left: 5;
+  left: 0%;
   
 }
 .recoverGrid {
@@ -454,9 +454,8 @@ body {
 .mainDiv {
   background-color: white;
   padding: 1vw;
+  }
   
-}
-
 
 
 .borderBottom {
@@ -468,15 +467,37 @@ body {
 
 }
 .nameGrid p {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 
 @media (max-width: 576px) {
-   .sidebarINFO {
-     height: fit-content;
+   .ClassSidebar {
+     background-color: white;
+     width: 70%;
    }
-  
+   .nameGrid { 
+     width: 50%;
+   }
+   .caseGrid {
+     width: 20%;
+   }
+   .recoverGrid {
+    width: 20%;
+    left: 60%;
+  }
+  .deathGrid {
+    width: 20%;
+    left: 120%;
+  }
+  .newCasesGrid {
+    width: 50%;
+    left: 180%;
+  }
+  .newDeathsGrid {
+    width: 50%;
+    left: 240%;
+  }
   .result {
     margin-top: 8vw;
   }
@@ -506,11 +527,7 @@ body {
 
   }
 
-  .navbarDATA {
-    color: white;
-    font-size: 3vw;
-  }
-
+  
   .result p {
     width: 70%;
     margin: 0px auto;

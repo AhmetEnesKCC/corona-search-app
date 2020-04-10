@@ -263,12 +263,12 @@ class Search extends React.Component {
               
               <img className="animated" src={Logo} alt="animated corona"/>
               <img className="animated2" src={Logo} alt="animated corona"/>
-              <Sidebar 
+              <Sidebar
           sidebar={
             
               <div className="mainDiv">
               <div className="nameGrid">
-              <div className="orange">LOCATIONS</div>
+              <div className="orange fixed">LOCATIONS</div>
                 {
                 this.state.countries_stat.map(item => (
                   <p className="borderBottom" key={item.Name}>{item.country_name}</p>
@@ -280,7 +280,7 @@ class Search extends React.Component {
              <div className="contentContainer">
              <div className="secondContent">
               <div className="caseGrid">
-                <div className="orange">CASES</div>
+                <div className="orange fixed">CASES</div>
                 {
                   this.state.countries_stat.map(item => (
                     <p className="borderBottom" key={item.Case}>{item.cases}</p>
@@ -288,14 +288,14 @@ class Search extends React.Component {
                 }
               </div>
               <div className="recoverGrid">
-                <div className="orange">RECOVERED</div>
+                <div className="orange fixed">RECOVERED</div>
                 {
                   this.state.countries_stat.map(item => (
                     <p className="borderBottom" key={item.Recover}>{item.total_recovered}</p>
                   ) )
                 }
               </div>
-              <div className="deathGrid">
+              <div className="deathGrid fixed">
                 <div className="orange">DEATHS</div>
                 {
                   this.state.countries_stat.map(item => (
@@ -303,7 +303,7 @@ class Search extends React.Component {
                   ) )
                 }
               </div>
-              <div className="newCasesGrid">
+              <div className="newCasesGrid fixed">
                 <div className="orange">NEW CASES</div>
                 {
                   this.state.countries_stat.map(item => (
@@ -311,7 +311,7 @@ class Search extends React.Component {
                   ) )
                 }
               </div>
-              <div className="newDeathsGrid">
+              <div className="newDeathsGrid" fixed>
                 <div className="orange">NEW DEATHS</div>
                 {
                   this.state.countries_stat.map(item => (
@@ -328,7 +328,7 @@ class Search extends React.Component {
 
         }
           open={this.state.sidebarOpen}
-          onSetOpen={this.onSetSidebarOpen}
+          onSetOpen={this.onSetSidebarOpen} sidebarClassName="ClassSidebar"
           styles={{sidebar: {position: "fixed",width: "60%"}}}>
             <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
