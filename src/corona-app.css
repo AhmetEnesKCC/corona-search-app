@@ -393,7 +393,7 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 40% auto auto auto;
   background-color: transparent;
   padding: .5vw;
   color: #707070;
@@ -403,8 +403,9 @@ body {
   font-size: 1.8vw;
   text-transform: uppercase;
 }
-.grid-item:nth-child(n) {
+.grid-item:nth-child(4n-3) {
   text-transform: uppercase;
+
 }
 .grid-item:nth-child(4n) {
   text-align: right;

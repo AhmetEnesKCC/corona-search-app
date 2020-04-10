@@ -259,13 +259,13 @@ class Search extends React.Component {
                     <p key={item.country}>{item.country_name}</p>
                   ))}</div>
                   <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country}>{item.cases}</p>
+                    <p key={item.country2}>{item.cases}</p>
                   ))}</div>
                   <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country}>{item.total_recovered}</p>
+                    <p key={item.country3}>{item.total_recovered}</p>
                   ))}</div>
                   <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country}>{item.deaths}</p>
+                    <p key={item.country4}>{item.deaths}</p>
                   ))}</div>
                   
                
@@ -280,7 +280,7 @@ class Search extends React.Component {
         }
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{sidebar: {background: "black",position: "fixed",width: "50%",backgroundColor: "transparent"}}}>
+          styles={{sidebar: {background: "black",position: "fixed",width: "60%",backgroundColor: "transparent"}}}>
             <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
             </button>
