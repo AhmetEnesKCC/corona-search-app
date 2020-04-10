@@ -217,7 +217,7 @@ class Search extends React.Component {
         document.getElementsByClassName("info")[0].style.color = "#707070";
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)";
         document.getElementsByClassName("result")[0].style.color = "white";
-        document.getElementsByClassName("hamburger")[0].style.filter = "invert(0%)"
+        document.getElementsByClassName("hamburger")[0].style.filter = "invert(30%)"
         document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "white"
         document.getElementsByClassName("mainDiv")[0].style.color = "#707070"
 

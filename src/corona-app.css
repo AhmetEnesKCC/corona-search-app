@@ -3,6 +3,17 @@
   color: white;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
+  border-radius: 10px;
+}
 
 .animated {
   position: absolute;
@@ -98,20 +109,20 @@ body {
   height: fit-content;
 }
 .sidebarBTN {
-  width: 6vw;
-  height: 6vw;
+  width: 5vw;
+  height: 5vw;
   background-color: transparent;
   border: none;
   outline: none;
   position: fixed;
   z-index: 1;
-  left: 3vw;
-  top: 3vw;
+  left: 4vw;
+  top: 4vw;
   filter: invert(20%);
 }
 .sidebarBTN img {
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
 }
 
 
@@ -303,6 +314,9 @@ body {
   top: 0vw;
 
 }
+.hamburger {
+  filter: invert(30%);
+}
 
 
 .left {
@@ -395,7 +409,7 @@ body {
 }
 .caseGrid {
   display: grid;
-  width: 30%;
+  width: 30vw;
   grid-template-columns: auto;
   position: absolute;
   left: 5;
@@ -429,6 +443,8 @@ body {
   float: left;
   position: relative;
   left: 145%;
+  resize: vertical;
+
 }
 .secondContent {
   position: relative;
@@ -438,6 +454,7 @@ body {
 .mainDiv {
   background-color: white;
   padding: 1vw;
+  
 }
 
 
