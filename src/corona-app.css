@@ -462,7 +462,13 @@ body {
 .borderBottom {
   color: #707070;
   font-size: 1.5vw;
-  margin-top: .5vw;
+  margin: 0;
+  line-height: 4.0vw;
+  font-family:'IBM Plex Sans', sans-serif;
+
+}
+.nameGrid p {
+  font-weight: bolder;
 }
 
 
@@ -485,6 +491,10 @@ body {
     width: 70%;
     height: 45vw;
 
+  }
+  .borderBottom {
+    font-size: 2.5vw;
+    font-family: 'IBM Plex Sans', sans-serif;
   }
 
   .left {
