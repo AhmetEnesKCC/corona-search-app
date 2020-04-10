@@ -414,7 +414,7 @@ body {
 }
 @media (max-width: 576px) {
    .sidebarINFO {
-     height: 100vh;
+     height: fit-content;
    }
   .sidebarContent {
     text-align: center;
@@ -484,7 +484,7 @@ body {
     color: #f0932b;
     font-size: 2.1vw;
   }
-  .grid-item {
+  .grid-item  {
     border-bottom: .2vw#707070 solid;
     padding: .2vw;
     font-size: 2vw;
