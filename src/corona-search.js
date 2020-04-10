@@ -285,7 +285,7 @@ class Search extends React.Component {
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
             </button>
           </Sidebar>
-                <div className="makeMiddle">
+                <div className="makeRight">
                   <p className="switcher">{this.state.LIGHTMODE}</p>
                   <label className="globalSwitch">
                   <input onClick={() => this.darkMode()} className="switch" type="checkbox" id="switch"/>

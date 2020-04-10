@@ -330,7 +330,7 @@ body {
   color: #707070;
   font-size: 2vw;
   font-weight: bolder;
-  margin-top: 1vw;
+  margin-top: .5vw;
 }
 .switch {
   opacity: 0;
@@ -360,25 +360,26 @@ body {
   transition: 0.4s;
   border-radius: 20vw;
   border: 1px white solid;
+  z-index: 2;
 }
 .slider::before {
   position: absolute;
   content: "";
   height: 3vw;
-  width: 6vw;
+  width:6vw;
   left: 1vw;
-  bottom: 0.5vw;
+  bottom: 0.4vw;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 10vw;
 }
-.makeMiddle {
+.makeRight {
   margin: 0px auto;
   width: 30%;
   position: absolute;
   z-index: 1;
-  left: 35%;
+  right: 9%;
   top: 3%;
 }
 .navbarDATA {

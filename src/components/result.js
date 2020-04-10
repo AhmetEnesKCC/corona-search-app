@@ -15,7 +15,7 @@ class Result extends React.Component {
                 {this.props.Recovered && <p className="darker">Recovered: <span className="green"><CountUp start={0} end={this.props.Recovered} duration={2}></CountUp></span></p>}
                 {this.props.Deaths && <p className="darker">Deaths: <span className="red"><CountUp start={0} end={this.props.Deaths} duration={2}></CountUp></span></p>}
                 {this.props.deathPercent && <p className="darker">Death Percent: <span className="yellow">% <CountUp decimals={2} end={(this.props.deathPercent)} duration={3}></CountUp></span></p>}
-                {this.props.Critical && <p className="darker">Critical: <span id="newdeaths" className="red">{this.props.Critical}</span></p>}
+                {this.props.Critical && <p className="darker">Critical: <span id="newdeaths" className="red"><CountUp start={0} end={(this.props.Critical)} duration={2}></CountUp></span></p>}
                 </div>
                 
                 
