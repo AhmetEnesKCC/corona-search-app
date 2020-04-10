@@ -379,54 +379,81 @@ body {
   width: 30%;
   position: absolute;
   z-index: 1;
-  right: 9%;
+  right: 7%;
   top: 3%;
 }
-.navbarDATA {
-  color: white;
-  text-align: left;
-  margin-left: 10%;
-} 
-
-.sidebarINFO {
-  background-color:white;
-  height: fit-content;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 40% auto auto auto;
-  background-color: transparent;
-  padding: .5vw;
-  color: #707070;
-}
-.grid-item:nth-child(-n+4) {
+.orange {
   color: #f0932b;
-  font-size: 1.8vw;
-  text-transform: uppercase;
+  font-size: 2.1vw;
 }
-.grid-item:nth-child(4n-3) {
-  text-transform: uppercase;
 
+.nameGrid {
+  display: grid;
+  width: 35%;
+  grid-template-columns: auto;
+  float: left;
 }
-.grid-item:nth-child(4n) {
-  text-align: right;
+.caseGrid {
+  display: grid;
+  width: 30%;
+  grid-template-columns: auto;
+  position: absolute;
+  left: 5;
+  
 }
-.grid-item:nth-child(4n-1) {
-  text-align: center;
+.recoverGrid {
+  display: grid;
+  width: 20%;
+  grid-template-columns: auto;
+  position: absolute;
+  left: 35%;
 }
-.grid-item {
-  padding: .2vw;
+.deathGrid {
+  display: grid;
+  width: 40%;
+  grid-template-columns: auto;
+  position: absolute;
+  left: 75%;
+}
+.newCasesGrid {
+  display: grid;
+  width: 36%;
+  grid-template-columns: auto;
+  position: absolute;
+  left: 105%;
+}
+.newDeathsGrid {
+  display: grid;
+  width: 38%;
+  grid-template-columns: auto;
+  float: left;
+  position: relative;
+  left: 145%;
+}
+.secondContent {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: none;
+}
+.mainDiv {
+  background-color: white;
+  padding: 1vw;
+}
+
+
+
+.borderBottom {
+  color: #707070;
   font-size: 1.5vw;
-  border-bottom: #707070 .2vw solid;
+  margin-top: .5vw;
 }
+
+
 @media (max-width: 576px) {
    .sidebarINFO {
      height: fit-content;
    }
-  .sidebarContent {
-    text-align: center;
-    font-size: 4vw;
-  }
+  
   .result {
     margin-top: 8vw;
   }
@@ -480,22 +507,7 @@ body {
     width: 6vw;
     height: 6vw;
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: transparent;
-    padding: 1vw;
-    color: #707070;
-  }
-  .grid-item:nth-child(-n+4) {
-    color: #f0932b;
-    font-size: 2.1vw;
-  }
-  .grid-item  {
-    border-bottom: .2vw#707070 solid;
-    padding: .2vw;
-    font-size: 2vw;
-  }
+  
   
 }
 

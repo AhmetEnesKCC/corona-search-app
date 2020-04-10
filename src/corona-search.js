@@ -129,9 +129,10 @@ class Search extends React.Component {
           this.setState({
             countries_stat: result.countries_stat
           });
-        }
+        } 
       
-      )}
+      )
+      }
   
 
   
@@ -169,6 +170,12 @@ class Search extends React.Component {
         for ( var d = 0; d < document.getElementsByClassName("firstFOR").length;d++) {
           document.getElementsByClassName("firstFOR")[d].style.color = "white"
         }
+        for ( var e = 0; e < document.getElementsByClassName("borderBottom").length;e++) {
+          document.getElementsByClassName("borderBottom")[e].style.color = "white"
+        }
+        for ( var g = 0; g < document.getElementsByClassName("orange").length;g++) {
+          document.getElementsByClassName("orange")[g].style.color = "white"
+        }
         
         document.body.style.backgroundColor = "black";
         document.getElementsByClassName("switcher")[0].style.color = "white";
@@ -176,8 +183,9 @@ class Search extends React.Component {
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white";
         document.getElementsByClassName("result")[0].style.color = "white";
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)"
-        document.getElementsByClassName("sidebarINFO")[0].style.backgroundColor = "#707070"
-        document.getElementsByClassName("grid-container")[0].style.color = "white"
+        document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "#707070"
+
+        
 
 
 
@@ -197,6 +205,12 @@ class Search extends React.Component {
         for ( var c = 0; c< document.getElementsByClassName("firstFOR").length;c++) {
           document.getElementsByClassName("firstFOR")[c].style.color = "#f0932b"
         }
+        for ( var f = 0; f < document.getElementsByClassName("borderBottom").length;f++) {
+          document.getElementsByClassName("borderBottom")[f].style.color = "#707070"
+        }
+        for ( var h = 0; h < document.getElementsByClassName("orange").length;h++) {
+          document.getElementsByClassName("orange")[h].style.color = "#f0932b"
+        }
         
         document.body.style.backgroundColor = "white";
         document.getElementsByClassName("switcher")[0].style.color = "#707070";
@@ -204,8 +218,11 @@ class Search extends React.Component {
         document.getElementsByClassName("searchInput")[0].style.backgroundColor = "rgb(252, 252, 252)";
         document.getElementsByClassName("result")[0].style.color = "white";
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(0%)"
-        document.getElementsByClassName("sidebarINFO")[0].style.backgroundColor = "white"
-        document.getElementsByClassName("grid-container")[0].style.color = "#707070"
+        document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "white"
+        document.getElementsByClassName("mainDiv")[0].style.color = "#707070"
+
+
+        
 
 
 
@@ -248,39 +265,71 @@ class Search extends React.Component {
               <img className="animated2" src={Logo} alt="animated corona"/>
               <Sidebar 
           sidebar={
-            <div>
-              <div className="sidebarINFO">
-                <div className="grid-container">
-                  <div className="grid-item firstFOR">LOCATION</div>
-                  <div className="grid-item firstFOR">CASES</div>
-                  <div className="grid-item firstFOR">RECOVERED</div>
-                  <div className="grid-item firstFOR">DEATHS</div>
-                  <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country}>{item.country_name}</p>
-                  ))}</div>
-                  <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country2}>{item.cases}</p>
-                  ))}</div>
-                  <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country3}>{item.total_recovered}</p>
-                  ))}</div>
-                  <div className="grid-item">{this.state.countries_stat.map(item => (
-                    <p key={item.country4}>{item.deaths}</p>
-                  ))}</div>
-                  
-               
-                  
-                  
-                  
-                </div>
+            
+              <div className="mainDiv">
+              <div className="nameGrid">
+              <div className="orange">LOCATIONS</div>
+                {
+                this.state.countries_stat.map(item => (
+                  <p className="borderBottom" key={item.Name}>{item.country_name}</p>
+                ))
+              }
+                
               </div>
-            </div>
+              
+             <div className="contentContainer">
+             <div className="secondContent">
+              <div className="caseGrid">
+                <div className="orange">CASES</div>
+                {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.Case}>{item.cases}</p>
+                  ) )
+                }
+              </div>
+              <div className="recoverGrid">
+                <div className="orange">RECOVERED</div>
+                {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.Recover}>{item.total_recovered}</p>
+                  ) )
+                }
+              </div>
+              <div className="deathGrid">
+                <div className="orange">DEATHS</div>
+                {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.Death}>{item.deaths}</p>
+                  ) )
+                }
+              </div>
+              <div className="newCasesGrid">
+                <div className="orange">NEW CASES</div>
+                {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.NewCases}>{item.new_cases}</p>
+                  ) )
+                }
+              </div>
+              <div className="newDeathsGrid">
+                <div className="orange">NEW DEATHS</div>
+                {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.NewDeaths}>{item.new_deaths}</p>
+                  ) )
+                }
+              </div>
+              </div>
+             </div>
+              
+              </div>
+            
             
 
         }
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{sidebar: {background: "black",position: "fixed",width: "60%",backgroundColor: "transparent"}}}>
+          styles={{sidebar: {position: "fixed",width: "60%"}}}>
             <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
               <img className="hamburger" src={Hamburger} alt="hamburger"/>
             </button>
