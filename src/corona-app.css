@@ -231,6 +231,8 @@ body {
 
 .cover {
   max-width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 ::placeholder {
@@ -333,9 +335,54 @@ body {
   right: 10vw;
   top: -4vw;
 }
+.settingPanel {
+  width: 40vw;
+  height: 20vw;
+  position: absolute;
+  background-color: white;
+  left: 30vw;
+  top: 10vw;
+  transition: 0.2s;
+}
+.closeBTN img {
+  width: 5vw;
+  height: 5vw;
+  margin: 0;
+  padding: 0%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .darkMode {
   width: 100%;
-  height: 6vw;
+  height: 100%;
+}
+
+.closeButton {
+  filter: invert(30%)
+}
+
+.closeBTN {
+  position: absolute;
+  bottom: 1vw;
+  width: 5vw;
+  height: 5vw;
+  margin: 0;
+  padding: 0%;
+  box-sizing: content-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  left: 2vw;
+}
+
+.ShadowedSettingPanel {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  z-index: 9;
 }
 
 .globalSwitch {
@@ -344,7 +391,7 @@ body {
   float: right;
   width: 15vw;
   height: 4vw;
-  right: 18vw;
+  right: 2vw;
 }
 .switcher {
   float: left;
@@ -354,7 +401,7 @@ body {
   font-weight: bolder;
   position: absolute;
   top: .5vw;
-  left: 8vw;
+  left: 2vw;
 }
 .switch {
   opacity: 0;
@@ -398,13 +445,54 @@ body {
   transition: 0.4s;
   border-radius: 10vw;
 }
-.makeRight {
+.stayHOME {
+  position: fixed;
+  top: 2vw;
+  right: 3vw;
+  font-size: 2vw;
+  color: #707070;
+  font-weight: 900;
+}
+.Settings {
   margin: 0 auto;
   position: relative;
   background-color: white;
   width: 100%;
   z-index: 1;
-  height: 4vw;
+  height: 6vw;
+  border: none;
+}
+.settingIcon {
+  filter: invert(30%)
+}
+.settingBTN {
+  width: 6vw;
+  height: 6vw;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: calc((100% - 6vw) / 2);
+  background-color: transparent;
+}
+.settingBTN img {
+  width: 6vw;
+  height: 6vw;
+  cursor: pointer;
+}
+.settingBTN img:hover {
+  animation: rotateHover 2s  reverse;
+}
+.settingBTN img:active {
+  animation: rotateActive 1s ;
+}
+@keyframes rotateHover {
+  from{transform: rotate(0deg)}
+  to{transform: rotate(360deg);}
+}
+@keyframes rotateActive {
+  from{transform: rotate(0deg)}
+  to{transform: rotate(360deg);}
 }
 .orange {
   color: #f0932b;
@@ -578,8 +666,29 @@ body {
     width: 6vw;
     height: 6vw;
   }
-  
-  
+  .settingPanel {
+    width: 60vw;
+    left: 20vw;
+    height: 40vw;
+    top: 30vh;
+  }
+  .darkMode {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    background-color: transparent;
+
+    top: 30%;
+  }
+  .closeBTN {
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+  }
+  .closeBTN img {
+    width: 7vw;
+    height: 7vw;
+  }
 }
 
 .hide {
