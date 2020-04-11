@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "489c4db11f0827a02e27d2ad0baa28be",
+    "revision": "406655a3b1d8939fbfb516c3f2c9427c",
     "url": "/corona-search-app/index.html"
   },
   {
-    "revision": "67b6ba038e71e5e9db61",
+    "revision": "7b18e551320f5d6198e7",
     "url": "/corona-search-app/static/css/2.c1758b73.chunk.css"
   },
   {
-    "revision": "b325f7fa014ff4865c6a",
-    "url": "/corona-search-app/static/css/main.4fcfb917.chunk.css"
+    "revision": "52d1e4924b4d925ac4a9",
+    "url": "/corona-search-app/static/css/main.824348ed.chunk.css"
   },
   {
-    "revision": "67b6ba038e71e5e9db61",
-    "url": "/corona-search-app/static/js/2.a0aca9e5.chunk.js"
+    "revision": "7b18e551320f5d6198e7",
+    "url": "/corona-search-app/static/js/2.2f6ab2fa.chunk.js"
   },
   {
     "revision": "e8b0ae1bd2f59a85f300b3c60c50941a",
-    "url": "/corona-search-app/static/js/2.a0aca9e5.chunk.js.LICENSE.txt"
+    "url": "/corona-search-app/static/js/2.2f6ab2fa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b325f7fa014ff4865c6a",
-    "url": "/corona-search-app/static/js/main.b90014ef.chunk.js"
+    "revision": "52d1e4924b4d925ac4a9",
+    "url": "/corona-search-app/static/js/main.9e4f05a2.chunk.js"
   },
   {
     "revision": "5519a827a1be5bb25ce1",
@@ -36,6 +36,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/corona-search-app/static/media/UK.441c24e4.jpg"
   },
   {
+    "revision": "a58fcca568012b72c84077b428e4ed26",
+    "url": "/corona-search-app/static/media/blackSettingsICON.a58fcca5.png"
+  },
+  {
     "revision": "06055976565f2444d8310f5e1394ddaf",
     "url": "/corona-search-app/static/media/china.06055976.png"
   },
@@ -46,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "010898322d805aa3814ccb6cf811fecc",
     "url": "/corona-search-app/static/media/goTop.01089832.png"
+  },
+  {
+    "revision": "27585086346c9d3cc2fa973cf77a4b46",
+    "url": "/corona-search-app/static/media/sideBar.27585086.png"
   },
   {
     "revision": "a9018b41fd98fcd4f53c07faf7a65573",
