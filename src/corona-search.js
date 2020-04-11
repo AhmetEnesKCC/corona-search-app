@@ -10,8 +10,7 @@ import Iran from "./Images/Iran.png"
 import China from "./Images/china.png"
 import Sidebar from "react-sidebar"
 import Hamburger from "./Images/hamburger.png"
-
-
+import "../src/pace.css"
 class Search extends React.Component {
   
 
@@ -116,6 +115,7 @@ class Search extends React.Component {
 
     
     componentDidMount() {
+      
       fetch(`https://corona-virus-world-and-india-data.p.rapidapi.com/api`,{
         "method": "GET",
         "headers": {
@@ -134,8 +134,7 @@ class Search extends React.Component {
       )
       }
   
-
-  
+     
 
     
     
@@ -145,6 +144,7 @@ class Search extends React.Component {
    
         goTop() {
           window.scrollTo({top : 0,behavior: "smooth"})
+          
 
         }
         
@@ -170,8 +170,8 @@ class Search extends React.Component {
         for ( var d = 0; d < document.getElementsByClassName("firstFOR").length;d++) {
           document.getElementsByClassName("firstFOR")[d].style.color = "white"
         }
-        for ( var e = 0; e < document.getElementsByClassName("borderBottom").length;e++) {
-          document.getElementsByClassName("borderBottom")[e].style.color = "white"
+        for ( var p = 0; p < document.getElementsByClassName("borderBottom").length;p++) {
+          document.getElementsByClassName("borderBottom")[p].style.color = "white"
         }
         for ( var g = 0; g < document.getElementsByClassName("orange").length;g++) {
           document.getElementsByClassName("orange")[g].style.color = "white"
@@ -184,6 +184,10 @@ class Search extends React.Component {
         document.getElementsByClassName("result")[0].style.color = "white";
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)"
         document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "#707070"
+        document.getElementsByClassName("mainDiv")[0].style.color = "white"
+        document.getElementsByClassName("makeRight")[0].style.backgroundColor = "#707070"
+        document.getElementsByClassName("makeRight")[0].style.color = "white"
+
 
         
 
@@ -220,6 +224,8 @@ class Search extends React.Component {
         document.getElementsByClassName("hamburger")[0].style.filter = "invert(30%)"
         document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "white"
         document.getElementsByClassName("mainDiv")[0].style.color = "#707070"
+        document.getElementsByClassName("makeRight")[0].style.backgroundColor = "white"
+        document.getElementsByClassName("makeRight")[0].style.color = "#707070"
 
 
         
@@ -251,6 +257,7 @@ class Search extends React.Component {
       this.setState({ sidebarOpen: open})
       this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     }
+   
     
     
     
@@ -260,80 +267,13 @@ class Search extends React.Component {
         return (
           
             <div className="cover">
-              
+            
               <img className="animated" src={Logo} alt="animated corona"/>
               <img className="animated2" src={Logo} alt="animated corona"/>
               <Sidebar
           sidebar={
             
-              <div className="mainDiv">
-              <div className="nameGrid">
-              <div className="orange fixed">LOCATIONS</div>
-                {
-                this.state.countries_stat.map(item => (
-                  <p className="borderBottom" key={item.Name}>{item.country_name}</p>
-                ))
-              }
-                
-              </div>
-              
-             <div className="contentContainer">
-             <div className="secondContent">
-              <div className="caseGrid">
-                <div className="orange fixed">CASES</div>
-                {
-                  this.state.countries_stat.map(item => (
-                    <p className="borderBottom" key={item.Case}>{item.cases}</p>
-                  ) )
-                }
-              </div>
-              <div className="recoverGrid">
-                <div className="orange fixed">RECOVERED</div>
-                {
-                  this.state.countries_stat.map(item => (
-                    <p className="borderBottom" key={item.Recover}>{item.total_recovered}</p>
-                  ) )
-                }
-              </div>
-              <div className="deathGrid fixed">
-                <div className="orange">DEATHS</div>
-                {
-                  this.state.countries_stat.map(item => (
-                    <p className="borderBottom" key={item.Death}>{item.deaths}</p>
-                  ) )
-                }
-              </div>
-              <div className="newCasesGrid fixed">
-                <div className="orange">NEW CASES</div>
-                {
-                  this.state.countries_stat.map(item => (
-                    <p className="borderBottom" key={item.NewCases}>{item.new_cases}</p>
-                  ) )
-                }
-              </div>
-              <div className="newDeathsGrid" fixed>
-                <div className="orange">NEW DEATHS</div>
-                {
-                  this.state.countries_stat.map(item => (
-                    <p className="borderBottom" key={item.NewDeaths}>{item.new_deaths}</p>
-                  ) )
-                }
-              </div>
-              </div>
-             </div>
-              
-              </div>
-            
-            
-
-        }
-          open={this.state.sidebarOpen}
-          onSetOpen={this.onSetSidebarOpen} sidebarClassName="ClassSidebar"
-          styles={{sidebar: {position: "fixed",width: "60%"}}}>
-            <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
-              <img className="hamburger" src={Hamburger} alt="hamburger"/>
-            </button>
-          </Sidebar>
+              <div>
                 <div className="makeRight">
                   <p className="switcher">{this.state.LIGHTMODE}</p>
                   <label className="globalSwitch">
@@ -342,6 +282,77 @@ class Search extends React.Component {
                   </label>
                   
                 </div>
+                <div className="mainDiv">
+                
+                <div className="nameGrid">
+                <div className="orange fixed">LOCATIONS</div>
+                  {
+                  this.state.countries_stat.map(item => (
+                    <p className="borderBottom" key={item.Name}>{item.country_name}</p>
+                  ))
+                }
+                  
+                </div>
+                
+               <div className="contentContainer">
+               <div className="secondContent">
+                <div className="caseGrid">
+                  <div className="orange fixed">CASES</div>
+                  {
+                    this.state.countries_stat.map(item => (
+                      <p className="borderBottom" key={item.Case}>{item.cases}</p>
+                    ) )
+                  }
+                </div>
+                <div className="recoverGrid">
+                  <div className="orange fixed">RECOVERED</div>
+                  {
+                    this.state.countries_stat.map(item => (
+                      <p className="borderBottom" key={item.Recover}>{item.total_recovered}</p>
+                    ) )
+                  }
+                </div>
+                <div className="deathGrid fixed">
+                  <div className="orange">DEATHS</div>
+                  {
+                    this.state.countries_stat.map(item => (
+                      <p className="borderBottom" key={item.Death}>{item.deaths}</p>
+                    ) )
+                  }
+                </div>
+                <div className="newCasesGrid fixed">
+                  <div className="orange">NEW CASES</div>
+                  {
+                    this.state.countries_stat.map(item => (
+                      <p className="borderBottom" key={item.NewCases}>{item.new_cases}</p>
+                    ) )
+                  }
+                </div>
+                <div className="newDeathsGrid" fixed>
+                  <div className="orange">NEW DEATHS</div>
+                  {
+                    this.state.countries_stat.map(item => (
+                      <p className="borderBottom" key={item.NewDeaths}>{item.new_deaths}</p>
+                    ) )
+                  }
+                </div>
+                </div>
+               </div>
+                
+                </div>
+              </div>
+            
+            
+
+        }
+          open={this.state.sidebarOpen} 
+          onSetOpen={this.onSetSidebarOpen} sidebarClassName="ClassSidebar"
+          styles={{sidebar: {position: "fixed",width: "60%",height: "100vh"}}}>
+            <button className="sidebarBTN" onClick={() => this.onSetSidebarOpen(true)}>
+              <img className="hamburger" src={Hamburger} alt="hamburger"/>
+            </button>
+          </Sidebar>
+                
               
             <div className="top">
               <h1 className="info">CORONA TRACK</h1>

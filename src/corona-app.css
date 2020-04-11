@@ -2,7 +2,20 @@
   background-color: #f0932b;
   color: white;
 }
+body, html {
+  cursor: url(Images/cursor.png),pointer;
+  
 
+  height: 100%;
+}
+@keyframes FadeAnim {
+  0% {
+     opacity: 0;
+  }
+  100% {
+     opacity: 1;
+  }
+  }
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -101,13 +114,7 @@ body {
   width: 100%;
   height: 20vw;
 }
-.sidebarContent {
-  color: white;
-  text-align: center;
-  font-size: 2vw;
-  margin: 0;
-  height: fit-content;
-}
+
 .sidebarBTN {
   width: 5vw;
   height: 5vw;
@@ -332,11 +339,12 @@ body {
 }
 
 .globalSwitch {
-  position: relative;
+  position: absolute;
   display: inline-block;
   float: right;
   width: 15vw;
   height: 4vw;
+  right: 18vw;
 }
 .switcher {
   float: left;
@@ -344,7 +352,9 @@ body {
   color: #707070;
   font-size: 2vw;
   font-weight: bolder;
-  margin-top: .5vw;
+  position: absolute;
+  top: .5vw;
+  left: 8vw;
 }
 .switch {
   opacity: 0;
@@ -389,12 +399,12 @@ body {
   border-radius: 10vw;
 }
 .makeRight {
-  margin: 0px auto;
-  width: 30%;
-  position: absolute;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  width: 100%;
   z-index: 1;
-  right: 7%;
-  top: 3%;
+  height: 4vw;
 }
 .orange {
   color: #f0932b;
@@ -415,12 +425,18 @@ body {
   left: 0%;
   
 }
+.caseGrid p:nth-child(2n) {
+  color: black;
+}
 .recoverGrid {
   display: grid;
   width: 20%;
   grid-template-columns: auto;
   position: absolute;
   left: 35%;
+}
+.recoverGrid p:nth-child(2n) {
+  color: black;
 }
 .deathGrid {
   display: grid;
@@ -429,12 +445,18 @@ body {
   position: absolute;
   left: 75%;
 }
+.deathGrid p:nth-child(2n) {
+  color: black;
+}
 .newCasesGrid {
   display: grid;
   width: 36%;
   grid-template-columns: auto;
   position: absolute;
   left: 105%;
+}
+.newCasesGrid p:nth-child(2n) {
+  color: black;
 }
 .newDeathsGrid {
   display: grid;
@@ -446,10 +468,14 @@ body {
   resize: vertical;
 
 }
+
+.newDeathsGrid p:nth-child(2n) {
+  color: black;
+}
 .secondContent {
   position: relative;
   overflow-x: auto;
-  overflow-y: none;
+  overflow-y: auto;
 }
 .mainDiv {
   background-color: white;
@@ -482,6 +508,7 @@ body {
    .caseGrid {
      width: 20%;
    }
+   
    .recoverGrid {
     width: 20%;
     left: 60%;
