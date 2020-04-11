@@ -100,6 +100,9 @@ body, html {
     top: 2vw;
   }
 }
+html {
+  -webkit-tap-highlight-color: transparent
+}
 
 body {
   margin: 0px;
@@ -125,7 +128,15 @@ body {
   z-index: 1;
   left: 4vw;
   top: 4vw;
-  filter: invert(20%);
+  padding: none;
+}
+.sidebarBTN:hover {
+  animation: slide .7s   infinite;
+}
+@keyframes slide {
+  from{left:4vw}
+  to{left:6vw}
+
 }
 .sidebarBTN img {
   width: 5vw;
@@ -228,13 +239,15 @@ body {
 .btn p {
   margin: 0px;
 }
-
+button,
+textarea,
+input,
+select,
 .cover {
-  max-width: 100%;
-  height: 100%;
-  position: absolute;
-}
+position: absolute;
+-webkit-tap-highlight-color: black
 
+}
 ::placeholder {
   color: #f0932b;
   opacity: 0.5;
@@ -341,7 +354,7 @@ body {
   position: absolute;
   background-color: white;
   left: 30vw;
-  top: 10vw;
+  top: 30vh;
   transition: 0.2s;
 }
 .closeBTN img {
@@ -380,7 +393,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: fixed;
   display: none;
   z-index: 9;
 }
@@ -445,6 +458,7 @@ body {
   transition: 0.4s;
   border-radius: 10vw;
 }
+
 .stayHOME {
   position: fixed;
   top: 2vw;
@@ -562,6 +576,7 @@ body {
 }
 .secondContent {
   position: relative;
+  background-color: transparent;
   overflow-x: auto;
   overflow-y: auto;
 }
