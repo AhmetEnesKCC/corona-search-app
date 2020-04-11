@@ -704,6 +704,9 @@ position: absolute;
     width: 7vw;
     height: 7vw;
   }
+  .stayHOME {
+    font-size: 4vw;
+  }
 }
 
 .hide {
