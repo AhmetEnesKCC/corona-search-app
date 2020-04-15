@@ -356,6 +356,7 @@ position: absolute;
   left: 30vw;
   top: 30vh;
   transition: 0.2s;
+  z-index: 10;
 }
 .closeBTN img {
   width: 5vw;
@@ -369,6 +370,7 @@ position: absolute;
 .darkMode {
   width: 100%;
   height: 100%;
+  z-index: 11;
 }
 
 .closeButton {
@@ -466,6 +468,7 @@ position: absolute;
   font-size: 2vw;
   color: #707070;
   font-weight: 900;
+  z-index: 12;
 }
 .Settings {
   margin: 0 auto;
@@ -630,6 +633,7 @@ position: absolute;
   }
   .result {
     margin-top: 8vw;
+    z-index: 11;
   }
   
   .top {

@@ -25,18 +25,18 @@ class  Settings extends React.Component {
           
           document.body.style.backgroundColor = "black";
           document.getElementsByClassName("switcher")[0].style.color = "white";
-          document.getElementsByClassName("info")[0].style.color = "white"
+          document.getElementsByClassName("info")[0].style.color = "white";
           document.getElementsByClassName("searchInput")[0].style.backgroundColor = "white";
           document.getElementsByClassName("result")[0].style.color = "white";
-          document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)"
-          document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "#707070"
-          document.getElementsByClassName("mainDiv")[0].style.color = "white"
-          document.getElementsByClassName("darkMode")[0].style.color = "white"
-          document.getElementsByClassName("settingPanel")[0].style.backgroundColor = "#707070"
-          document.getElementsByClassName("Settings")[0].style.backgroundColor = "#707070"
-          document.getElementsByClassName("settingIcon")[0].style.filter = "invert(100%)"
-          document.getElementsByClassName("closeButton")[0].style.filter = "invert(100%)"
-          document.getElementsByClassName("stayHOME")[0].style.color = "white"
+          document.getElementsByClassName("hamburger")[0].style.filter = "invert(100%)";
+          document.getElementsByClassName("mainDiv")[0].style.backgroundColor = "#707070";
+          document.getElementsByClassName("mainDiv")[0].style.color = "white";
+          document.getElementsByClassName("darkMode")[0].style.color = "white";
+          document.getElementsByClassName("settingPanel")[0].style.backgroundColor = "#707070";
+          document.getElementsByClassName("Settings")[0].style.backgroundColor = "#707070";
+          document.getElementsByClassName("settingIcon")[0].style.filter = "invert(100%)";
+          document.getElementsByClassName("closeButton")[0].style.filter = "invert(100%)";
+          document.getElementsByClassName("stayHOME")[0].style.color = "white";
   
   
           
@@ -100,22 +100,29 @@ class  Settings extends React.Component {
           })
   
   
-  
+        
   
   
   
   
         }
+       
       }
-      closeSettings() {
+      close() {
         document.getElementsByClassName("ShadowedSettingPanel")[0].style.display = "none"
+      }
+      
+      closeSettings() {
+      if (document.getElementsByClassName("settingPanel").clicked) {
+          document.getElementsByClassName("ShadowedSettingPanel")[0].style.display = "none"
+      }
       }
    
 
     render() {
         return (
-            <div className="ShadowedSettingPanel">
-                <div className="settingPanel">
+            <div onClick={() => this.closeSettings()}   className="ShadowedSettingPanel">
+                <div  className="settingPanel">
                 <div className="darkMode">
                 <p className="switcher">{this.state.LIGHTMODE}</p>
                   <label className="globalSwitch">
@@ -124,7 +131,7 @@ class  Settings extends React.Component {
                   </label>
                   
             </div>
-            <button onClick={() => this.closeSettings()} className="closeBTN">
+            <button onClick={() => this.close()} className="closeBTN">
                       <img className="closeButton" src={closeBTN} alt="closeButton"/>
                   </button>
             </div>
